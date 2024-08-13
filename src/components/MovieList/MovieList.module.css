@@ -1,0 +1,13 @@
+.movieListItem {
+    position:relative;
+    max-width: 340px;
+    width:100%;
+}
+
+.movieList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+ 
+}

@@ -1,0 +1,28 @@
+.movieDetailsPageSection {
+    padding-top:0px;
+    padding-bottom: 12px;
+
+}
+.movieDetailsPageContainer {
+    max-width: 370px;
+    width:100%;
+    padding-inline: 15px;
+    margin-inline: auto;
+}
+
+.movieDetailsPageLoadingContainer {
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+   }
+
+.movieDetailsPageLimk {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.movieDetailsPageList {
+    padding-bottom: 12px;
+/* margin-bottom: 12px; */
+border-bottom: 1px dotted blue;
+}

@@ -1,0 +1,22 @@
+.moviesPageLoadingContainer {
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+   }
+
+   .moviesPageSection {
+    padding-top:12px;
+    padding-bottom: 12px;
+   
+
+}
+.moviesPageContainer {
+    max-width: 370px;
+    width:100%;
+    padding-inline: 15px;
+    margin-inline: auto;
+}
+
+.moviesPageTitle {
+    margin-bottom: 12px;
+}

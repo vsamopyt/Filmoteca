@@ -1,0 +1,17 @@
+.movieDetailsCardTitle {
+    margin-bottom: 12px;
+}
+
+.movieDetailsCardList {
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.movieDetailsCardOverview {
+margin-bottom: 12px;
+}
+
+.movieDetailsCardImgContainer {
+    margin-bottom: 12px;
+}

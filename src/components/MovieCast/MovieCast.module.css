@@ -1,0 +1,21 @@
+.movieCastList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:20px;
+    /* justify-content: space-between; */
+}
+
+.movieCastLoadingContainer {
+    display: flex;
+    justify-content:space-between;
+    padding: 12px 0;
+}
+
+.movieCastLoadingTitle {
+    margin-bottom: 20px;
+}
+
+.movieCastLoadingWraper {
+    padding-top: 12px;
+}

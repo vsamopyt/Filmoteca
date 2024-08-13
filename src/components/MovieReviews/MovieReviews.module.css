@@ -1,0 +1,20 @@
+.movieReviewsLoadingContainer {
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+   }
+
+.MovieReviewsList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+}
+
+.MovieReviewsTitle {
+    margin-bottom: 16px;
+}
+
+.MovieReviewsWraper {
+    padding-top: 12px;
+}
