@@ -82,7 +82,7 @@ export default function MovieDetailsCard({ data }) {
               />
             ) : (
               <img
-                src="./././curtain-2757815_1280_1.png"
+                src="../../images/curtain-2757815_1280_1.png"
                 alt="blank-image"
               />
             )}
