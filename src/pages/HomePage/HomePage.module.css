@@ -1,10 +1,12 @@
 .homePageSection {
     padding-top:12px;
     padding-bottom: 12px;
+    background-color:rgb(1, 6, 31);
    
 
 }
 .homePageContainer {
+    padding-top: 56px;
     max-width: 370px;
     width:100%;
     padding-inline: 15px;
@@ -14,10 +16,30 @@
 .homePageTitle {
     /* font-size: 24px; */
     margin-bottom: 20px;
+    color: white;
 }
 
 .homePageLoadingContainer {
  display: flex;
  justify-content: center;
  padding: 12px 0;
+}
+
+
+
+@media (min-width: 760px) {
+    .homePageContainer {
+        max-width: 760px;
+        width:100%;
+        padding-inline: 15px;
+        margin-inline: auto;
+      
+    }
+    
+}
+
+@media (min-width: 1280px) {
+    .homePageContainer  {
+      max-width: 1280px;
+    }
 }

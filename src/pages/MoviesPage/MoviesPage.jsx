@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import MovieList from '../../components/MovieList/MovieList';
 import BarLoader from 'react-spinners/BarLoader';
+import {Toaster, toast} from "react-hot-toast"
 import { fetchMoviesBySearch } from '../../movies-api';
 import css from './MoviesPage.module.css';
 
@@ -80,6 +81,7 @@ export default function MoviesPage() {
         setMoviesPageLoading(true);
         const result = await fetchMoviesBySearch(titleFilter);
         setSearchValue(result.data.results);
+        toast.success(`Successfully toasted!  ${result.data.total_results}`)
       } catch (error) {
         setMoviesPageError(true);
       } finally {
@@ -96,13 +98,17 @@ export default function MoviesPage() {
           <p>Ooops! Something went wrong! Reload the page please!</p>
         )}
         <h1 className={css.moviesPageTitle}>Search Movies</h1>
-        <SearchBar onChange={handleForm} />
+        <div className={css.moviesPageSearchBar}>
+
+        <SearchBar  onChange={handleForm} />
+        </div>
         {moviesPageLoading && (
           <div className={css.moviesPageLoadingContainer}>
             <BarLoader />
           </div>
         )}
         {searchValue.length > 0 && <MovieList array={searchValue} />}
+        <div><Toaster/></div>
       </div>
     </section>
   );

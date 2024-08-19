@@ -19,6 +19,7 @@
 
 .searchBarForm {
     display: flex;
-  justify-content: space-between;
-    margin-bottom: 12px;
+    /* justify-content: space-between; */
+    /* margin-bottom: 12px; */
+    justify-content: flex-start;
 }

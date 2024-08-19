@@ -46,7 +46,7 @@ export default function MovieCast() {
         {movieCastDetail.length > 0 &&
           movieCastDetail.map(item => {
             return (
-              <li key={item.id}>
+              <li key={item.id} className={css.movieCastListItem}>
                 <MovieCastCard item={item} />
               </li>
             );

@@ -3,6 +3,10 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState, useRef, Suspense } from 'react';
 import BarLoader from 'react-spinners/BarLoader';
 import { fetchMovieById } from '../../movies-api';
+import { MdMovieFilter } from "react-icons/md";
+import { MdOutlineMovieFilter } from "react-icons/md";
+import { MdMovieEdit } from "react-icons/md";
+import { FaLongArrowAltLeft } from "react-icons/fa";
 import MovieDetailsCard from '../../components/MovieDetailsCard/MovieDetailsCard';
 import css from './MovieDetailsPage.module.css';
 
@@ -35,15 +39,19 @@ export default function MovieDetailsPage() {
   return (
     <section className={css.movieDetailsPageSection}>
       <div className={css.movieDetailsPageContainer}>
+
         <Link
-          className={css.movieDetailsPageLimk}
+          className={css.movieDetailsPageLink}
           to={backLinkRef.current}
         >
-          go back
+         <FaLongArrowAltLeft /> go back
         </Link>
         {MovieDetailsPageLoading && (
           <div className={css.movieDetailsPageLoadingContainer}>
-            <BarLoader />
+            <BarLoader 
+             color={"orange"}
+             size={ 200}
+            className={css.movieDetailsPageBarloader} />
           </div>
         )}
         {MovieDetailsPageError && (
@@ -52,12 +60,17 @@ export default function MovieDetailsPage() {
         {movieDetail && <MovieDetailsCard data={movieDetail} />}
         <ul className={css.movieDetailsPageList}>
           <li>
+
             <Link to={'cast'} state={location}>
+            
+            <MdOutlineMovieFilter />
+
               Movie Cast
             </Link>
           </li>
           <li>
             <Link to={'reviews'} state={location}>
+            <MdMovieEdit />
               Movie Review
             </Link>
           </li>

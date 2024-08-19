@@ -2,11 +2,16 @@
     display: flex;
     justify-content: center;
     padding: 12px 0;
+    padding-top: 56px;
+   
+   
    }
 
    .moviesPageSection {
-    padding-top:12px;
+    padding-top:76px;
     padding-bottom: 12px;
+    background-color:rgb(1, 6, 31);
+    min-height: 100vh;
    
 
 }
@@ -19,4 +24,22 @@
 
 .moviesPageTitle {
     margin-bottom: 12px;
+}
+
+
+.moviesPageSearchBar {
+padding-bottom: 38px;
+}
+
+@media (min-width: 760px) {
+    .moviesPageContainer {
+        max-width: 760px;
+    }
+    
+}
+
+@media (min-width: 1280px) {
+    .moviesPageContainer {
+      max-width: 1280px;
+    }
 }

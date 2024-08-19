@@ -13,8 +13,8 @@ export default function MovieCastCard({ item }) {
       )}
 
       <div className={css.movieCastCardTextContainer}>
-        <p>{name}</p>
-        <p>as {character}</p>
+        <p className={css.movieCastCardName}>{name}</p>
+        <p className={css.movieCastCardCharacter}>as {character}</p>
       </div>
     </div>
   );

@@ -1,17 +1,82 @@
 .movieDetailsCardTitle {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
+  color: rgb(147, 167, 187);
 }
 
 .movieDetailsCardList {
-    margin-bottom: 12px;
-    font-size: 14px;
-    font-weight: bold;
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(180, 195, 210);
 }
 
 .movieDetailsCardOverview {
-margin-bottom: 12px;
+  margin-bottom: 12px;
+  color: rgb(180, 195, 210);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
 }
 
 .movieDetailsCardImgContainer {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+
+
+/* .SiGoogleearth {
+  color: orange;
+  width:2rem;
+} */
+
+.ioEarth, .faStarHalfAlt, .faClockRotateLeft, .SiGoogleearth  {
+  color: orange;
+  font-size: 1rem;
+  margin-right: 6px;
+}
+
+.movieDetailsCardGenres, 
+.movieDetailsCardCountry, 
+.movieDetailsCardRating,
+ .movieDetailsCardRuntime {
+  color: orange;
+}
+
+
+/* @media (min-width: 760px) {
+    .homePageContainer {
+        max-width: 760px;
+        width:100%;
+        padding-inline: 15px;
+        margin-inline: auto;
+      
+    }
+    
+} */
+
+@media (min-width: 1280px) {
+  .movieDetailsCardImgContainer {
+    max-width: 900px;
+    height: auto;
+  }
+
+  /* .MovieDetailsCardContainer {
+    background-repeat: no-repeat;
+    background-image: linear-gradient(
+        to left,
+        rgba(254, 254, 254, 0.969),
+        rgba(255, 254, 254, 0.872),
+        rgb(255, 254, 254)
+      ),
+      url('../../../film-4208954_1280_10.jpg');
+    background-position: bottom right 0;
+  } */
+
+  .movieDetailsCardList {
+    font-size: 18px;
+   
+  }
+
+  .movieDetailsCardOverview {
+    font-size: 18px;
+  }
 }

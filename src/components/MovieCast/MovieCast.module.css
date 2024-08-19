@@ -1,9 +1,14 @@
 .movieCastList {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     flex-wrap: wrap;
     gap:20px;
-    /* justify-content: space-between; */
+    /* width: calc((100% - 40px) / 2); */
+   
+}
+
+.movieCastListItem {
+     width: calc((100% - 40px) / 3);
 }
 
 .movieCastLoadingContainer {
@@ -18,4 +23,18 @@
 
 .movieCastLoadingWraper {
     padding-top: 12px;
+}
+
+
+@media (min-width: 760px) {
+    .movieCastListItem {
+        width: calc((100% - 60px) / 4);
+   }
+    
+}
+
+@media (min-width: 1280px) {
+    .movieCastListItem {
+        width: calc((100% - 100px) / 6);
+   }
 }

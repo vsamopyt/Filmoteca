@@ -1,28 +1,54 @@
 .movieDetailsPageSection {
-    padding-top:0px;
-    padding-bottom: 12px;
-
+  padding-top: 6px;
+  padding-bottom: 12px;
+  background-color:rgb(1, 6, 31);
 }
+
 .movieDetailsPageContainer {
-    max-width: 370px;
-    width:100%;
-    padding-inline: 15px;
-    margin-inline: auto;
+  max-width: 370px;
+  width: 100%;
+  padding-inline: 15px;
+  margin-inline: auto;
+  padding-top: 56px;
 }
 
 .movieDetailsPageLoadingContainer {
-    display: flex;
-    justify-content: center;
-    padding: 12px 0;
-   }
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
+  /* background-color: aliceblue; */
+}
 
-.movieDetailsPageLimk {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 14px;
+.movieDetailsPageLink {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-top: 6px;
+  font-size: 14px;
 }
 .movieDetailsPageList {
-    padding-bottom: 12px;
-/* margin-bottom: 12px; */
-border-bottom: 1px dotted blue;
+  padding-bottom: 12px;
+
+  border-bottom: 1px dotted blue;
+}
+
+.movieDetailsPageBarloader {
+  color: aqua;
+  background-color: chocolate;
+
+}
+
+@media (min-width: 760px) {
+  .movieDetailsPageContainer {
+    max-width: 760px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .movieDetailsPageContainer {
+    max-width: 1280px;
+  }
+
+  
 }
