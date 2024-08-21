@@ -1,7 +1,9 @@
 .homePageSection {
     padding-top:12px;
-    padding-bottom: 12px;
+    padding-bottom: 24px;
     background-color:rgb(1, 6, 31);
+    min-height: 100vh;
+     
    
 
 }
@@ -15,8 +17,10 @@
 
 .homePageTitle {
     /* font-size: 24px; */
-    margin-bottom: 20px;
-    color: white;
+    margin-bottom: 32px;
+    /* color: white; */
+    color: rgb(189, 196, 225);
+    /* color: orange */
 }
 
 .homePageLoadingContainer {
@@ -31,7 +35,7 @@
     .homePageContainer {
         max-width: 760px;
         width:100%;
-        padding-inline: 15px;
+        /* padding-inline: 20px; */
         margin-inline: auto;
       
     }

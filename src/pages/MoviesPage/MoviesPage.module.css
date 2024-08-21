@@ -8,7 +8,7 @@
    }
 
    .moviesPageSection {
-    padding-top:76px;
+    padding-top:72px;
     padding-bottom: 12px;
     background-color:rgb(1, 6, 31);
     min-height: 100vh;
@@ -24,6 +24,7 @@
 
 .moviesPageTitle {
     margin-bottom: 12px;
+    color: rgb(189, 196, 225);
 }
 
 

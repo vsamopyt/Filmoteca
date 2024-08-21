@@ -8,7 +8,7 @@ export default function MovieReviewsCard({ item }) {
     author_details: { avatar_path },
   } = item;
 
-  const style = { color: 'black', fontSize: '32px' };
+  const style = { color: 'rgb(180, 195, 210)', fontSize: '32px' };
 
   return (
     <>
@@ -28,7 +28,7 @@ export default function MovieReviewsCard({ item }) {
       </div>
 
       <p className={css.movieReviewsCardText}>{content}</p>
-      <p>{created_at}</p>
+      <p className={css.movieReviewsCardDate}>{created_at}</p>
     </>
   );
 }

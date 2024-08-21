@@ -39,7 +39,7 @@ export default function MovieCard({ item, index }) {
       {!poster_path && <p className={css.movieCardName}>{title}</p>}
       <div className={css.movieCardYearContainer}>
         {/* <div className={css.movieCardIndexContainer}>{voteAveragePersent }</div> */}
-        <span>Release year:</span> <span>{releaseYear}</span>
+        <span></span> <span>{releaseYear}</span>
         {/* <RatingStars/> */}
       </div>
       <div className={css.movieCardRatingContainer}>

@@ -1,12 +1,14 @@
-import { Link, Outlet, useLocation} from 'react-router-dom';
+import { Link, Outlet, useLocation, NavLink } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState, useRef, Suspense } from 'react';
 import BarLoader from 'react-spinners/BarLoader';
 import { fetchMovieById } from '../../movies-api';
-import { MdMovieFilter } from "react-icons/md";
-import { MdOutlineMovieFilter } from "react-icons/md";
-import { MdMovieEdit } from "react-icons/md";
-import { FaLongArrowAltLeft } from "react-icons/fa";
+import { MdMovieFilter } from 'react-icons/md';
+import { MdOutlineMovieFilter } from 'react-icons/md';
+import { MdMovieEdit } from 'react-icons/md';
+import { FaLongArrowAltLeft } from 'react-icons/fa';
+import { IoIosPeople } from "react-icons/io";
+import clsx from 'clsx';
 import MovieDetailsCard from '../../components/MovieDetailsCard/MovieDetailsCard';
 import css from './MovieDetailsPage.module.css';
 
@@ -16,7 +18,11 @@ export default function MovieDetailsPage() {
   const [MovieDetailsPageLoading, setMovieDetailsPageLoading] = useState(false);
   const [MovieDetailsPageError, setMovieDetailsPageError] = useState(false);
   const location = useLocation();
-  const backLinkRef = useRef(location.state ?? "/movies");
+  const backLinkRef = useRef(location.state ?? '/movies');
+
+  const buildLinkClass = ({ isActive }) => {
+    return clsx(css.link, isActive && css.linkActive);
+  };
 
   useEffect(() => {
     if (!movieId) {
@@ -39,19 +45,16 @@ export default function MovieDetailsPage() {
   return (
     <section className={css.movieDetailsPageSection}>
       <div className={css.movieDetailsPageContainer}>
-
-        <Link
-          className={css.movieDetailsPageLink}
-          to={backLinkRef.current}
-        >
-         <FaLongArrowAltLeft /> go back
+        <Link className={css.movieDetailsPageLink} to={backLinkRef.current}>
+          <FaLongArrowAltLeft /> go back
         </Link>
         {MovieDetailsPageLoading && (
           <div className={css.movieDetailsPageLoadingContainer}>
-            <BarLoader 
-             color={"orange"}
-             size={ 200}
-            className={css.movieDetailsPageBarloader} />
+            <BarLoader
+              color={'orange'}
+              size={200}
+              className={css.movieDetailsPageBarloader}
+            />
           </div>
         )}
         {MovieDetailsPageError && (
@@ -60,23 +63,23 @@ export default function MovieDetailsPage() {
         {movieDetail && <MovieDetailsCard data={movieDetail} />}
         <ul className={css.movieDetailsPageList}>
           <li>
-
-            <Link to={'cast'} state={location}>
-            
-            <MdOutlineMovieFilter />
-
-              Movie Cast
-            </Link>
+            <NavLink  to={'cast'} className ={buildLinkClass} state={location}>
+            <IoIosPeople 
+            className={css.movieDetailsPageListIcon}/>
+            Movie Cast
+              
+              {/* <div className={css.MovieCast}> Movie Cast</div> */}
+            </NavLink>
           </li>
           <li>
-            <Link to={'reviews'} state={location}>
-            <MdMovieEdit />
+            <NavLink to={'reviews'}  className ={buildLinkClass} state={location}>
+              <MdMovieEdit className={css.movieDetailsPageListIcon}/>
               Movie Review
-            </Link>
+            </NavLink>
           </li>
         </ul>
         <Suspense fallback={<div>Loading child route component</div>}>
-        <Outlet />
+          <Outlet />
         </Suspense>
       </div>
       ;

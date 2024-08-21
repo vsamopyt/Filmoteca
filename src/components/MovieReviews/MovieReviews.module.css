@@ -7,12 +7,14 @@
 .MovieReviewsList {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
 
 }
 
 .MovieReviewsTitle {
     margin-bottom: 16px;
+    color: rgb(147, 167, 187);
+  color: rgb(189, 196, 225);
 }
 
 .MovieReviewsWraper {

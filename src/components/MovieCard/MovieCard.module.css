@@ -23,12 +23,12 @@
     border-bottom: 2px solid rgba(255, 255, 255, 0.768);
 }
 
-.movieCardYearContainer {
+/* .movieCardYearContainer {
     position: absolute;
     left: 0;
     bottom:2%;
     padding: 2px 8px;
-    /* background-color: rgba(63, 61, 61, 0.404); */
+   
     background-color:rgba(167, 37, 37, 0.404);
     color: white;
     border-radius: 4px;
@@ -37,6 +37,23 @@
     border-right: 1px solid white;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
+} */
+
+.movieCardYearContainer {
+    position: absolute;
+    right: 0;
+  bottom:1%;
+    padding: 2px 8px;
+   
+    background-color:rgba(167, 37, 37, 0.404);
+    color: white;
+    border-radius: 4px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    /* border-right: 1px solid white; */
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
 }
 
 .movieCardIndexContainer {
@@ -141,7 +158,8 @@ margin-right: 4px;;
     top:-8px;
     left: -5%;
     font-size: 56px;
-    color: #070161a7;
+    color: #0961e691;
+    color: #646cff;
    
     /* color:linear-gradient(to left,  orange,  rgb(12, 8, 0)) ; */
     /* color: rgb(145, 129, 237); */

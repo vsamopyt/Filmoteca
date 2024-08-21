@@ -28,7 +28,7 @@ export default function HomePage() {
   return (
     <section className={css.homePageSection}>
       <div className={css.homePageContainer}>
-        <h1 className={css.homePageTitle}>Top 20 rated movies, today</h1>
+        <h1 className={css.homePageTitle}>-Trending movies-</h1>
         {homePageError && (
           <p>Ooops! Something went wrong! Reload the page please!</p>
         )}

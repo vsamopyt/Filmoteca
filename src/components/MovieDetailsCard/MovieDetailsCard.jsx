@@ -47,13 +47,13 @@ export default function MovieDetailsCard({ data }) {
           <li>
             {' '}
             <SiGoogleearth className={css.SiGoogleearth} />
-            <span className={css.movieDetailsCardGenres}>GENRES: </span>
+            <span className={css.movieDetailsCardGenres}>Genres: </span>
             <span>{listGenres}</span>
           </li>
           <li>
             {' '}
             <IoEarth className={css.ioEarth} />
-            <span className={css.movieDetailsCardCountry}>COUNTRY: </span>
+            <span className={css.movieDetailsCardCountry}>Country: </span>
             <span>{listCountries}</span>
           </li>
           <li>
@@ -64,7 +64,7 @@ export default function MovieDetailsCard({ data }) {
           <li>
             {' '}
             <FaClockRotateLeft className={css.faClockRotateLeft} />
-            <span className={css.movieDetailsCardRuntime}>RUNTIME: </span>
+            <span className={css.movieDetailsCardRuntime}>Runtine: </span>
             <span>{runtime} min.</span>
           </li>
         </ul>

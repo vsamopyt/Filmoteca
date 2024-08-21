@@ -26,7 +26,7 @@
   align-items: center;
   margin-bottom: 16px;
   padding-top: 6px;
-  font-size: 14px;
+  font-size: 18px;
 }
 .movieDetailsPageList {
   padding-bottom: 12px;
@@ -38,6 +38,27 @@
   color: aqua;
   background-color: chocolate;
 
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #646cff;
+  font-size: 18px;
+}
+
+.linkActive { 
+  color: orange;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  
+}
+
+.movieDetailsPageListIcon {
+  font-size: 24px;
 }
 
 @media (min-width: 760px) {
