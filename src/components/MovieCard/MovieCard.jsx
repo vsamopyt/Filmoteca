@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import RatingStars from '../RatingStars/RatingStars';
-import { PiFilmSlateLight } from 'react-icons/pi';
+// import { PiFilmSlateLight } from 'react-icons/pi';
 import { PiFilmSlateFill } from "react-icons/pi";
 import css from './MovieCard.module.css';
 

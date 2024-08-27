@@ -1,0 +1,29 @@
+.loadMoreBtnWraper {
+    /* max-width: 154px; */
+    max-width: 194px;
+    padding-inline: 15px;
+    margin-inline: auto;
+    
+}
+
+.loadMoreBtnButton {
+    display: block;
+    padding: 12px 24px;
+    margin-inline: auto;
+    background-color: rgb(18, 18, 250);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.loadMoreBtnSection {
+    padding-bottom: 12px;
+    padding-top: 12px;
+}
+
+.loadMoreBtnButton:hover,
+.loadMoreBtnButton:focus {
+    background-color:  rgb(18, 18, 227);;
+
+}

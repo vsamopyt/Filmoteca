@@ -2,7 +2,9 @@ import { IoEarth } from 'react-icons/io5';
 import { SiGoogleearth } from 'react-icons/si';
 import { FaStarHalfAlt } from 'react-icons/fa';
 import { FaClockRotateLeft } from 'react-icons/fa6';
+import curtainImg from "../../images/curtainImg.png"
 import css from './MovieDetailsCard.module.css';
+
 export default function MovieDetailsCard({ data }) {
   const {
     overview,
@@ -82,7 +84,7 @@ export default function MovieDetailsCard({ data }) {
               />
             ) : (
               <img
-                src="../../../curtain-2757815_1280_1.png"
+                src={curtainImg}
                 alt="blank-image"
               />
             )}

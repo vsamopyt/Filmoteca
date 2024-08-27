@@ -7,6 +7,7 @@ const currentPageSearch = 1;
 axios.defaults.headers.common['Authorization'] = `Bearer ${accesKey}`;
 axios.defaults.headers.common['accept'] = 'application/json';
 axios.defaults.baseURL = 'https://api.themoviedb.org/3';
+
 export  async function fetchTrendingMovies() {
   const response = await axios.get('/trending/movie/day', {
     params: {
