@@ -64,7 +64,7 @@ export default function HomePage() {
           </div>
         )}
         {trendingMovies.length > 0 && <MovieList array={trendingMovies} />}
-        <ScrollToTop style={{ display:"flex", justifyContent: "center", alignItems:"center", padding: "0"}} component={<p style={{ color: "blue" }}>UP</p>}/>
+        <ScrollToTop style={{ display:"flex", justifyContent: "center", alignItems:"center", padding: "0"}} component={<p style={{ color: "blue", marginBottom: "0px" }}>UP</p>}/>
         {/* <LoadMoreBtn onHandle={handleLoadMore }/> */}
       </div>
      

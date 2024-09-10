@@ -30,7 +30,19 @@
 
 .moviesPageSearchBar {
 padding-bottom: 38px;
+
+
 }
+
+.moviePaginationContainer{
+
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+  
+  
+    }
+    
 
 @media (min-width: 760px) {
     .moviesPageContainer {

@@ -48,22 +48,8 @@ export  async function fetchMovieReviwsById(id) {
   return response;
 }
 
-export async function fetchMoviesBySearch(searchName) {
-const response =await axios.get('https://api.themoviedb.org/3/search/movie', {
-  params: {
-    query: searchName,
-    include_adult:false,
-    language: 'en-US',
-    page: currentPageSearch,
-
-  }
-});
-    return response
-
-}
-
 // export async function fetchMoviesBySearch(searchName) {
-// const response =await axios.get(`/search/movie?query${searchName}`, {
+// const response =await axios.get('https://api.themoviedb.org/3/search/movie', {
 //   params: {
 //     query: searchName,
 //     include_adult:false,
@@ -76,10 +62,16 @@ const response =await axios.get('https://api.themoviedb.org/3/search/movie', {
 
 // }
 
+export async function fetchMoviesBySearch(searchName,currentPageSearch ) {
+const response =await axios.get('https://api.themoviedb.org/3/search/movie', {
+  params: {
+    query: searchName,
+    include_adult:true,
+    language: 'en-US',
+    page: currentPageSearch,
 
-// curl --request GET \
-//      --url 'https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1' \
-//      --header 'accept: application/json'
-//      curl --request GET \
-//      --url 'https://api.themoviedb.org/3/search/movie?query=wwww&include_adult=false&language=en-US&page=1' \
-//      --header 'accept: application/json'
+  }
+});
+    return response
+
+}

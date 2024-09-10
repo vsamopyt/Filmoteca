@@ -16,6 +16,11 @@
     font-weight: bold;
 }
 
+.movieCastCardName,
+.movieCastCardCharacter {
+    margin-bottom: 0px;
+}
+
 
 
 @media (min-width: 760px) {

@@ -4,16 +4,16 @@ import RatingStars from '../RatingStars/RatingStars';
 import { PiFilmSlateFill } from "react-icons/pi";
 import css from './MovieCard.module.css';
 
-export default function MovieCard({ item, index }) {
+export default function MovieCard({ item, index, currentPage }) {
   const { title, id, poster_path, vote_average, release_date } = item;
   const releaseYear = release_date.slice(0, 4);
   const voteAveragePersent = Math.round(vote_average * 100) / 10 + '%';
   const voteAveragePersentRounded = Math.round(vote_average * 10) + '%';
 
-  console.log(voteAveragePersent);
+  // console.log(voteAveragePersent);
 
   const location = useLocation();
-  console.log(index + 1);
+  // console.log(index + 1);
 
   return (
     <>
@@ -60,7 +60,8 @@ export default function MovieCard({ item, index }) {
         <div className={css.movieCardFilmWraper} >
 
       <PiFilmSlateFill   className={css.movieCardNumberlogo}/>
-        <div className={css.movieCardIndex}>{index+1 }</div>
+        <div className={css.movieCardIndex}>{(index+1)+(currentPage-1)*20 }</div>
+          {/* <div className={css.movieCardIndex}>{(index+1)}</div> */}
         </div>
       </div>
 

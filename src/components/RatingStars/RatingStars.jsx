@@ -1,6 +1,6 @@
 import css from './RatingStars.module.css';
 export default function RatingStars({rating}) {
-    console.log(rating);
+    // console.log(rating);
     
     const ratingStarStyle = {
         width:rating,

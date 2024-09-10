@@ -16,7 +16,10 @@
 
 import MovieCard from '../MovieCard/MovieCard';
 import css from "./MovieList.module.css"
-export default function MovieList({ array }) {
+export default function MovieList({ array, currentPage }) {
+
+  // console.log(currentPage);
+  
   return (
     <ol className ={css.movieList}>
       {array.map((item,index) => {
@@ -25,6 +28,7 @@ export default function MovieList({ array }) {
             <MovieCard 
             item={item}
             index ={index}
+            currentPage = {currentPage}
              />
           </li>
         );
