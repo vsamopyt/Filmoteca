@@ -164,22 +164,22 @@ import css from "./MoviePagePagination.module.css"
     <>
       
       <ReactPaginate
-        nextLabel=">>"
+        nextLabel=">>>"
         onPageChange={handlePageClick}
         pageRangeDisplayed={1}
         marginPagesDisplayed={1}
         pageCount={totalPages}
-        previousLabel="<<"
-        pageClassName="page-item"
-        pageLinkClassName="page-link"
-        previousClassName="page-item"
-        previousLinkClassName="page-link"
-        nextClassName="page-item"
-        nextLinkClassName="page-link"
+        previousLabel="<<<"
+        pageClassName={css["page-item"]}
+        pageLinkClassName={css["page-link"]}
+        previousClassName={css["page-item"]}
+        previousLinkClassName={css["page-link"]}
+        nextClassName={css["page-item"]}
+        nextLinkClassName={css["page-link"]}
         breakLabel="..."
-        breakClassName="page-item"
-        breakLinkClassName="page-link"
-        containerClassName="pagination"
+        breakClassName={css["page-item"]}
+        breakLinkClassName={css["page-link"]}
+        containerClassName={css["pagination"]}
         activeClassName="active"
         // forcePage={currentPage-1} // Use this to set the initial page
         forcePage={currentPage-1} // Use this to set the initial page
