@@ -2,14 +2,14 @@
     display: flex;
     justify-content: center;
     padding: 12px 0;
-    padding-top: 56px;
+    padding-top: 50px;
    
    
    }
 
    .moviesPageSection {
-    padding-top:72px;
-    padding-bottom: 12px;
+    padding-top:84px;
+    padding-bottom: 24px;
     background-color:rgb(1, 6, 31);
     min-height: 100vh;
    
@@ -27,21 +27,26 @@
     color: rgb(189, 196, 225);
 }
 
+.moviePageSearcWraper {
+    padding-bottom: 24px;
+}
 
 .moviesPageSearchBar {
-padding-bottom: 38px;
+/* padding-bottom: 12px; */
+margin-bottom: 12px;
 
 
 }
 
 .moviePaginationContainer{
-
-    margin-top: 32px;
+    /* margin-top: 32px; */
     display: flex;
     justify-content: center;
-  
+    /* margin-bottom: 12px; */
   
     }
+    
+
     
 
 @media (min-width: 760px) {

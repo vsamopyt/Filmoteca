@@ -19,7 +19,9 @@ export default function MovieDetailsCard({ data }) {
 
   console.log(vote_average);
   const voteAveragePersent = Math.round(vote_average * 100) / 10;
-  const releaseYear = release_date.slice(0, 4);
+  // const releaseYear = release_date && release_date.slice(0, 4);
+  const releaseYear = release_date ?  release_date.slice(0, 4) :"n/a";
+// const releaseYear = "2014"
 
   // console.log(voteAveragePersent);
   // console.log(genres);

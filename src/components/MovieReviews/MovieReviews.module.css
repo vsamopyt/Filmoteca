@@ -20,3 +20,7 @@
 .MovieReviewsWraper {
     padding-top: 12px;
 }
+
+.infoMessage {
+    color: red;
+}

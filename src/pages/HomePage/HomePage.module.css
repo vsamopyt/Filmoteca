@@ -1,5 +1,5 @@
 .homePageSection {
-    padding-top:12px;
+    padding-top:84px;
     padding-bottom: 24px;
     background-color:rgb(1, 6, 31);
     min-height: 100vh;
@@ -8,7 +8,7 @@
 
 }
 .homePageContainer {
-    padding-top: 56px;
+    /* padding-top: 84px; */
     max-width: 360px;
     width:100%;
     padding-inline: 20px;
@@ -17,19 +17,39 @@
 
 .homePageTitle {
     /* font-size: 24px; */
-    margin-bottom: 32px;
+    /* margin-bottom: 32px; */
     /* color: white; */
+    padding-bottom: 42px;
     color: rgb(189, 196, 225);
     /* color: orange */
+}
+
+.homePageDate {
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(189, 196, 225);
 }
 
 .homePageLoadingContainer {
  display: flex;
  justify-content: center;
  padding: 12px 0;
+ padding-top: 48px;
 }
 
+.pageBarloader {
+    color: aqua;
+    background-color: chocolate;
+  
+  }
 
+.moviePaginationContainer{
+    /* margin-top: 32px; */
+    display: flex;
+    justify-content: center;
+    /* margin-bottom: 12px; */
+  
+    }
 
 @media (min-width: 760px) {
     .homePageContainer {

@@ -1,15 +1,154 @@
+// import BarLoader from 'react-spinners/BarLoader';
+// import MovieList from '../../components/MovieList/MovieList';
+
+// import { fetchTrendingMovies } from '../../movies-api';
+// import { useState, useEffect } from 'react';
+// import { useSearchParams } from 'react-router-dom';
+// import ScrollToTop from 'react-scroll-to-top';
+// import PaginatedItems from '../../components/MoviePagePagination/MoviePagePagination';
+// // import LoadMoreBtn from '../../components/LoadMoreBtn/LoadMoreBtn';
+// import css from './HomePage.module.css';
+
+// const scrollToTopStyle = {
+//   display: 'flex',
+//   justifyContent: 'center',
+//   alignItems: 'center',
+//   padding: '0',
+//   borderRadius: '50%',
+//   backgroundColor: 'blue',
+//   border: '4px solid rgb(189, 196, 225)',
+//   width: '50px',
+//   height: '50px',
+// };
+
+// const scrollToTopComponentStyle = {
+//   color: 'white',
+//   marginBottom: '0px',
+// };
+
+// const currentDate = new Date();
+// const dateString = `${currentDate.getDate()}.${currentDate.getMonth()+1}.${currentDate.getFullYear() }`
+
+// export default function HomePage() {
+//   const [trendingMovies, setTrendingMovies] = useState([]);
+//   const [homePageLoading, sethomePageLoading] = useState(false);
+//   const [homePageError, sethomePageError] = useState(false);
+
+//   const [searchParams, setSearchParams] = useSearchParams();
+//   const [totalPages, setTotalPages] =useState(1)
+
+//   // const [currentPage, setCurrentPage] = useState(1);
+//   // const [schowBtn, setSchowBtn] = useState(false);
+
+//   // const handleLoadMore = () => {
+//   //   setCurrentPage(currentPage + 1);
+//   // };
+
+//   // function handlePagination(newPage) {
+//   //   setSearchParams({ title: titleFilter, page: newPage });
+
+//   // }
+
+//   useEffect(() => {
+//     async function getTrendinMovies() {
+//       try {
+//         sethomePageLoading(true);
+
+//         const data = await fetchTrendingMovies();
+
+//         setTrendingMovies(data.data.results);
+
+//         // const response = await fetchTrendingMovies(currentPage);
+//         // const data = response.data.results;
+//         // if(currentPage === 1) {
+//         //    setTrendingMovies(data);
+//         // }
+//         // else {
+
+//         //   setTrendingMovies((previousData)=>{
+//         //     return [...previousData, ...data]
+//         //   })
+//         // }
+//       } catch (error) {
+//         sethomePageError(true);
+//       } finally {
+//         sethomePageLoading(false);
+//       }
+//     }
+//     getTrendinMovies();
+//   }, []);
+
+//   return (
+//     <section className={css.homePageSection}>
+//       <div className={css.homePageContainer}>
+//       <p className={css.homePageDate}>--{dateString}--</p>
+//         <h1 className={css.homePageTitle}>★Trending movies★</h1>
+
+//         {homePageError && (
+//           <p>Ooops! Something went wrong! Reload the page please!</p>
+//         )}
+//         {homePageLoading && (
+//           <div className={css.homePageLoadingContainer}>
+//             <BarLoader />
+//           </div>
+//         )}
+//         {trendingMovies.length > 0 && <MovieList array={trendingMovies} />}
+
+//         <ScrollToTop
+//           style={scrollToTopStyle}
+//           component={<p style={scrollToTopComponentStyle}>UP</p>}
+//         />
+
+//         {/* <LoadMoreBtn onHandle={handleLoadMore }/> */}
+//       </div>
+//     </section>
+//   );
+// }
+
 import BarLoader from 'react-spinners/BarLoader';
 import MovieList from '../../components/MovieList/MovieList';
+
 import { fetchTrendingMovies } from '../../movies-api';
 import { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import ScrollToTop from 'react-scroll-to-top';
+import PaginatedItems from '../../components/MoviePagePagination/MoviePagePagination';
 // import LoadMoreBtn from '../../components/LoadMoreBtn/LoadMoreBtn';
 import css from './HomePage.module.css';
+
+const scrollToTopStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  padding: '0',
+  borderRadius: '50%',
+  backgroundColor: 'blue',
+  border: '6px solid rgb(189, 196, 225)',
+  width: '54px',
+  height: '54px',
+  transition: "opacity .3s ease-in-out"
+};
+
+const scrollToTopComponentStyle = {
+  color: 'white',
+  marginBottom: '0px',
+};
+
+const currentDate = new Date();
+const dateString = `${currentDate.getDate()}.${
+  currentDate.getMonth() + 1
+}.${currentDate.getFullYear()}`;
 
 export default function HomePage() {
   const [trendingMovies, setTrendingMovies] = useState([]);
   const [homePageLoading, sethomePageLoading] = useState(false);
   const [homePageError, sethomePageError] = useState(false);
+
+  const [searchParams, setSearchParams] = useSearchParams({ page: 1 });
+  const [totalItems, setTotalItems] = useState(0);
+  const [totalPages, setTotalPages] = useState(1);
+  const currentPage = searchParams.get('page') ?? '';
+
   // const [currentPage, setCurrentPage] = useState(1);
   // const [schowBtn, setSchowBtn] = useState(false);
 
@@ -17,14 +156,27 @@ export default function HomePage() {
   //   setCurrentPage(currentPage + 1);
   // };
 
+  // setSearchParams({ page: 1 });
+  function handlePagination(newPage) {
+    setSearchParams({ page: newPage });
+  }
+
   useEffect(() => {
     async function getTrendinMovies() {
       try {
         sethomePageLoading(true);
 
+        const data = await fetchTrendingMovies(currentPage);
+        console.log(data);
 
-        const data = await fetchTrendingMovies();
-       
+        console.log(data.data.total_results);
+        console.log(data.data.total_pages);
+
+        // setTotalItems(data.data.total_results);
+        // setTotalPages(data.data.total_pages);
+
+        setTotalItems(10000);
+        setTotalPages(500);
 
         setTrendingMovies(data.data.results);
 
@@ -39,8 +191,6 @@ export default function HomePage() {
         //     return [...previousData, ...data]
         //   })
         // }
-     
-
       } catch (error) {
         sethomePageError(true);
       } finally {
@@ -48,26 +198,62 @@ export default function HomePage() {
       }
     }
     getTrendinMovies();
-  }, []);
+  }, [currentPage]);
 
   return (
     <section className={css.homePageSection}>
       <div className={css.homePageContainer}>
-     
-        <h1 className={css.homePageTitle}>-Trending movies-</h1>
+        <p className={css.homePageDate}>--{dateString}--</p>
+        <h1 className={css.homePageTitle}>★Trending movies★</h1>
+
         {homePageError && (
           <p>Ooops! Something went wrong! Reload the page please!</p>
         )}
-        {homePageLoading && (
-          <div className={css.homePageLoadingContainer}>
-            <BarLoader />
+
+        {totalPages > 1 && (
+          <div id="container" className={css.moviePaginationContainer}>
+            <PaginatedItems
+              itemsPerPage={20}
+              totalItems={totalItems}
+              onChange={handlePagination}
+              currentPage={currentPage}
+              totalPages={totalPages}
+            />
           </div>
         )}
-        {trendingMovies.length > 0 && <MovieList array={trendingMovies} />}
-        <ScrollToTop style={{ display:"flex", justifyContent: "center", alignItems:"center", padding: "0"}} component={<p style={{ color: "blue", marginBottom: "0px" }}>UP</p>}/>
+
+        {homePageLoading && (
+          <div className={css.homePageLoadingContainer}>
+            <BarLoader
+              color={'orange'}
+              size={200}
+              className={css.pageBarloader}
+            />
+          </div>
+        )}
+        {trendingMovies.length > 0 && (
+          <MovieList array={trendingMovies} currentPage={currentPage} />
+        )}
+
+        <ScrollToTop
+          style={scrollToTopStyle}
+          component={<p style={scrollToTopComponentStyle}>UP</p>}
+        />
+
         {/* <LoadMoreBtn onHandle={handleLoadMore }/> */}
+
+        {totalPages > 1 && (
+          <div id="container" className={css.moviePaginationContainer}>
+            <PaginatedItems
+              itemsPerPage={20}
+              totalItems={totalItems}
+              onChange={handlePagination}
+              currentPage={currentPage}
+              totalPages={totalPages}
+            />
+          </div>
+        )}
       </div>
-     
     </section>
   );
 }

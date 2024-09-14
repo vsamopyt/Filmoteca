@@ -53,7 +53,7 @@ export default function MovieDetailsPage() {
             <BarLoader
               color={'orange'}
               size={200}
-              className={css.movieDetailsPageBarloader}
+              className={css.pageBarloader}
             />
           </div>
         )}

@@ -180,7 +180,7 @@ import css from "./MoviePagePagination.module.css"
         breakClassName={css["page-item"]}
         breakLinkClassName={css["page-link"]}
         containerClassName={css["pagination"]}
-        activeClassName="active"
+        activeClassName={css["active"]}
         // forcePage={currentPage-1} // Use this to set the initial page
         forcePage={currentPage-1} // Use this to set the initial page
         renderOnZeroPageCount={null}

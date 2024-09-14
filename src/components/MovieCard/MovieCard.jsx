@@ -6,7 +6,10 @@ import css from './MovieCard.module.css';
 
 export default function MovieCard({ item, index, currentPage }) {
   const { title, id, poster_path, vote_average, release_date } = item;
-  const releaseYear = release_date.slice(0, 4);
+  // const releaseYear = "2000";
+  // console.log(release_date);
+    // const releaseYear = release_date &&  release_date.slice(0, 4);
+  const releaseYear = release_date ?  release_date.slice(0, 4) :"n/a";
   const voteAveragePersent = Math.round(vote_average * 100) / 10 + '%';
   const voteAveragePersentRounded = Math.round(vote_average * 10) + '%';
 
@@ -30,6 +33,12 @@ export default function MovieCard({ item, index, currentPage }) {
             alt="blank-image"
           />
         )}
+<div className={css.movieCardInfoWrapper}>
+<h2 className={css.movieCardTitle}>{title}</h2>
+        <span className={css.movieCardInfoYear}>{releaseYear}</span>
+        <span className={css.movieCardInfoRating}>{voteAveragePersentRounded }</span>
+</div>
+        
       </Link>
       {/* <div className={css.movieCardRatingContainer}>
         <span>Rating:</span> <span>{voteAveragePersent+"%"}</span> 

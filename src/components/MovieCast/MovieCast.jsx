@@ -36,11 +36,15 @@ export default function MovieCast() {
       )}
       {movieCastLoading && (
         <div className={css.movieCastLoadingContainer}>
-          <BarLoader />
+          <BarLoader 
+          color={'orange'}
+          size={200}
+          className={css.pageBarloader}
+          />
         </div>
       )}
       {!(movieCastDetail.length > 0) && (
-        <p>Sorry, there is no info about cast yet</p>
+        <p className={css.infoMessage}>Sorry, there is no info about cast yet</p>
       )}
       <ul className={css.movieCastList}>
         {movieCastDetail.length > 0 &&

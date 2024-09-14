@@ -8,7 +8,17 @@ axios.defaults.headers.common['Authorization'] = `Bearer ${accesKey}`;
 axios.defaults.headers.common['accept'] = 'application/json';
 axios.defaults.baseURL = 'https://api.themoviedb.org/3';
 
-export  async function fetchTrendingMovies() {
+// export  async function fetchTrendingMovies() {
+//   const response = await axios.get('/trending/movie/day', {
+//     params: {
+//       language: 'en-US',
+//       page: currentPage,
+//     },
+//   });
+//   return response;
+// }
+
+export  async function fetchTrendingMovies(currentPage) {
   const response = await axios.get('/trending/movie/day', {
     params: {
       language: 'en-US',
@@ -17,6 +27,7 @@ export  async function fetchTrendingMovies() {
   });
   return response;
 }
+
 
 export  async function fetchMovieById(id) {
   const response = await axios.get(`/movie/${id}`, {
@@ -66,7 +77,7 @@ export async function fetchMoviesBySearch(searchName,currentPageSearch ) {
 const response =await axios.get('https://api.themoviedb.org/3/search/movie', {
   params: {
     query: searchName,
-    include_adult:true,
+    include_adult:false,
     language: 'en-US',
     page: currentPageSearch,
 

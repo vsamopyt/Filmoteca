@@ -7,11 +7,13 @@
 .movieList {
   display: flex;
   flex-direction: column;
+  padding-top: 48px;
+  padding-bottom:48px;
   padding-left: 0;
   /* justify-content: space-between; */
   /* gap: 16px;
   gap: 24px; */
-  row-gap: 32px;
+  row-gap: 62px;
   column-gap: 24px;
 }
 
@@ -19,8 +21,9 @@
   .movieList {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 26px;
-    /* row-gap: 32px; */
+    column-gap: 26px;
+    /* gap: 48px; */
+    row-gap: 92px;
   }
 
   .movieListItem {
@@ -37,8 +40,9 @@
         margin-inline: auto; */
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 24px;
-    row-gap: 32px;
+    column-gap: 24px;
+    /* gap: 24px; */
+    /* row-gap: 32px; */
   }
 
   .movieListItem {

@@ -50,7 +50,7 @@ export default function MovieReviews() {
             );
           })
         ) : (
-          <p>Sorry, there are no reviews yet.</p>
+          <p className={css.infoMessage}>Sorry, there are no reviews yet.</p>
         )}
       </ul>
     </div>
