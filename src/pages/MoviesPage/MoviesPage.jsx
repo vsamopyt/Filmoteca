@@ -155,7 +155,7 @@ export default function MoviesPage() {
           <p>Ooops! Something went wrong! Reload the page please!</p>
         )}
         <div className={css.moviePageSearcWraper}>
-          <h1 className={css.moviesPageTitle}>Search Movies</h1>
+          <h1 className={css.moviesPageTitle}>Search movies by name</h1>
           <div className={css.moviesPageSearchBar}>
             <SearchBar onChange={handleForm} />
           </div>

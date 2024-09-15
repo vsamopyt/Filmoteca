@@ -80,5 +80,8 @@
 
   .movieDetailsCardOverview {
     font-size: 18px;
+    max-width: 900px;
   }
+
+
 }

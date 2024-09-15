@@ -2,6 +2,7 @@ import { Route, Routes,} from 'react-router-dom';
 import {lazy, Suspense} from "react";
 // import HomePage from '../../pages/HomePage/HomePage';
 import Navigation from '../Navigation/Navigation';
+import Footer from "../Footer/Footer"
 // import MovieCast from "../MovieCast/MovieCast";
 // import MovieReviews from "../MovieReviews/MovieReviews.";
 // import { useState } from 'react'
@@ -35,6 +36,8 @@ function App() {
   <Route path ="*" element ={<NotFoundPage/>}/>
     </Routes>
 </Suspense>
+
+<Footer/>
       
     </>
   )

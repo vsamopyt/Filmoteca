@@ -19,11 +19,16 @@
 .movieCastCardName,
 .movieCastCardCharacter {
     margin-bottom: 0px;
+
 }
 
 
 
 @media (min-width: 760px) {
+    .movieCastCardName,
+    .movieCastCardCharacter {
+        font-size: 14px;
+    }
   
   }
   

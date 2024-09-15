@@ -136,8 +136,11 @@ const scrollToTopComponentStyle = {
 
 const currentDate = new Date();
 const dateString = `${currentDate.getDate()}.${
-  currentDate.getMonth() + 1
+  // (currentDate.getMonth() + 1).padStart(2, '0')
+  (currentDate.getMonth() + 1).toString().padStart(2,"0")
 }.${currentDate.getFullYear()}`;
+
+// const month =
 
 export default function HomePage() {
   const [trendingMovies, setTrendingMovies] = useState([]);
@@ -203,8 +206,9 @@ export default function HomePage() {
   return (
     <section className={css.homePageSection}>
       <div className={css.homePageContainer}>
-        <p className={css.homePageDate}>--{dateString}--</p>
+        
         <h1 className={css.homePageTitle}>★Trending movies★</h1>
+        <p className={css.homePageDate}>--{dateString}--</p>
 
         {homePageError && (
           <p>Ooops! Something went wrong! Reload the page please!</p>

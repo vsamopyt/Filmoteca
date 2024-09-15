@@ -1,6 +1,6 @@
 .homePageSection {
-    padding-top:84px;
-    padding-bottom: 24px;
+    padding-top:94px;
+    padding-bottom: 48px;
     background-color:rgb(1, 6, 31);
     min-height: 100vh;
      
@@ -19,12 +19,14 @@
     /* font-size: 24px; */
     /* margin-bottom: 32px; */
     /* color: white; */
-    padding-bottom: 42px;
+    margin-bottom: 12px;
     color: rgb(189, 196, 225);
     /* color: orange */
+    text-transform: uppercase;
 }
 
 .homePageDate {
+    padding-bottom: 42px;
     font-size: 28px;
     font-weight: bold;
     color: rgb(189, 196, 225);

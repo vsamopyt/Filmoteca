@@ -4,11 +4,11 @@
     padding: 12px 0;
     padding-top: 50px;
    
-   
+
    }
 
    .moviesPageSection {
-    padding-top:84px;
+    padding-top:94px;
     padding-bottom: 24px;
     background-color:rgb(1, 6, 31);
     min-height: 100vh;
@@ -23,12 +23,13 @@
 }
 
 .moviesPageTitle {
-    margin-bottom: 12px;
+    margin-bottom: 34px;
     color: rgb(189, 196, 225);
+    text-transform: uppercase;
 }
 
 .moviePageSearcWraper {
-    padding-bottom: 24px;
+    padding-bottom: 32px;
 }
 
 .moviesPageSearchBar {

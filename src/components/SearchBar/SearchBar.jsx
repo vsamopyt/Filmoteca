@@ -8,7 +8,7 @@ export default function SearchBar({onChange}) {
   return (
     <>
       <form className={css.searchBarForm} onSubmit={handleSubmit}>
-        <input className={css.searchBarInput}type="search" name="searchBar" id="searchBar" />
+        <input className={css.searchBarInput}type="search" name="searchBar" id="searchBar" placeholder= "I am looking for ..." />
         <button className={css.searchBarButton} type="submit">Search</button>
       </form>
     </>
