@@ -30,7 +30,7 @@ export default function MovieCast() {
  
   return (
     <div className={css.movieCastLoadingWraper}>
-      <h2 className={css.movieCastLoadingTitle} >Movie Cast</h2>
+      <h1 className={css.movieCastLoadingTitle} >Movie Cast</h1>
       {movieCastError && (
         <p>Ooops! Something went wrong! Reload the page please!</p>
       )}
@@ -43,7 +43,7 @@ export default function MovieCast() {
           />
         </div>
       )}
-      {!(movieCastDetail.length > 0) && (
+      {/* {!(movieCastDetail.length === 0) && (
         <p className={css.infoMessage}>Sorry, there is no info about cast yet</p>
       )}
       <ul className={css.movieCastList}>
@@ -55,7 +55,60 @@ export default function MovieCast() {
               </li>
             );
           })}
-      </ul>
+      </ul> */}
+
+
+
+
+
+{/* <> {!movieCastDetail.length ?  <p className={css.infoMessage}>Sorry, there is no info about cast yet</p>:
+<ul className={css.movieCastList}>
+        {
+          movieCastDetail.map(item => {
+            return (
+              <li key={item.id} className={css.movieCastListItem}>
+                <MovieCastCard item={item} />
+              </li>
+            );
+          })}
+      </ul> }
+ 
+</> */}
+      
+
+<> {movieCastDetail.length > 0 && 
+<ul className={css.movieCastList}>
+        {
+          movieCastDetail.map(item => {
+            return (
+              <li key={item.id} className={css.movieCastListItem}>
+                <MovieCastCard item={item} />
+              </li>
+            );
+          })}
+      </ul> }
+ 
+</>
+
+{(movieCastDetail.length < 0) && (
+        <p className={css.infoMessage}>Sorry, there is no info about cast yet</p>
+      )}
+
+   
+
+{/* {!(movieCastDetail.length ) && (
+        <p className={css.infoMessage}>Sorry, there is no info about cast yet</p>
+      )} */}
+      {/* <ul className={css.movieCastList}>
+        {movieCastDetail.length > 0 &&
+          movieCastDetail.map(item => {
+            return (
+              <li key={item.id} className={css.movieCastListItem}>
+                <MovieCastCard item={item} />
+              </li>
+            );
+          })}
+      </ul> */}
     </div>
   );
 }

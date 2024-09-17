@@ -2,7 +2,7 @@
 
     position: absolute;
    /* right:5%; */
-   right:0;
+    right:0;
     top:2%;
     display: flex;
     align-items: center;
@@ -198,8 +198,10 @@ margin-right: 4px;;
 
 .movieCardTitle {
     /* margin-top: 8px; */
+    
     margin-right: 6px;
     font-size: 16px;
+   
     color: rgb(189, 196, 225);
     text-transform: uppercase;
     font-weight: normal;

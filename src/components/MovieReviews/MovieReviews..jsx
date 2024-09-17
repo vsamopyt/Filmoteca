@@ -30,21 +30,26 @@ export default function MovieReviews() {
   }, [movieId]);
   return (
     <div className={css.MovieReviewsWraper}>
-      <h2 className={css.MovieReviewsTitle}>Movie Reviws</h2>
+      <h1 className={css.MovieReviewsTitle}>Movie Reviws</h1>
       {movieReviewsError && (
         <p>Ooops! Something went wrong! Reload the page please!</p>
       )}
       {movieReviewsLoading && (
         <div className={css.movieReviewsLoadingContainer}>
-          <BarLoader />
+          <BarLoader 
+          color={'orange'}
+          size={200}
+          className={css.pageBarloader}
+          />
         </div>
       )}
-      <ul className={css.MovieReviewsList}>
+
+{/* <ul className={css.MovieReviewsList}>
         {movieReviews.length > 0 ? (
           movieReviews.map(item => {
             return (
               <li key={item.id}>
-                {/* {item.author} */}
+            
                 <MovieReviewsCard item={item} />
               </li>
             );
@@ -52,7 +57,45 @@ export default function MovieReviews() {
         ) : (
           <p className={css.infoMessage}>Sorry, there are no reviews yet.</p>
         )}
-      </ul>
+      </ul> */}
+
+
+      <>
+      {!movieReviewsLoading && movieReviews.length > 0 && 
+      <ul className={css.MovieReviewsList}>
+         { movieReviews.map(item => {
+            return (
+              <li key={item.id}>
+                {/* {item.author} */}
+                <MovieReviewsCard item={item} />
+              </li>
+            );
+          })}
+
+      </ul> }
+
+      </>
+{/* {movieReviews.length < 0  &&  <p className={css.infoMessage}>Sorry, there are no reviews yet.</p>} */}
+
+{!movieReviewsLoading && movieReviews.length === 0  &&  <p className={css.infoMessage}>Sorry, there are no reviews yet.</p>}
+
+    
+      
+      {/* <ul className={css.MovieReviewsList}>
+        {movieReviews.length > 0 ? (
+          movieReviews.map(item => {
+            return (
+              <li key={item.id}> */}
+                {/* {item.author} */}
+                {/* <MovieReviewsCard item={item} />
+              </li>
+            );
+          })
+        ) : (
+          <p className={css.infoMessage}>Sorry, there are no reviews yet.</p>
+        )}
+      </ul> */}
+
     </div>
   );
 }

@@ -1,7 +1,8 @@
 .movieDetailsCardTitle {
-  margin-bottom: 12px;
+  margin-bottom: 20px;
   color: rgb(147, 167, 187);
   color: rgb(189, 196, 225);
+  text-transform: uppercase;
   /* color: orange */
 }
 

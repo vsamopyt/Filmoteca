@@ -1,4 +1,4 @@
-.RatingStarContainer {
+/* .RatingStarContainer {
     padding: 0;
     position: relative;
     font-size: 24px;
@@ -41,7 +41,7 @@ color:white;
     position: absolute;
     top: 0;
     left: 0;
-    /* width: 90%; */
+   
     height:100%;
     overflow: hidden;
 } 
@@ -56,4 +56,55 @@ color:white;
     height:100%;
   color: rgb(247, 199, 5);
   
-} 
+}  */
+
+
+/* Container for the stars */
+.RatingStarContainer {
+    position: relative;
+   
+    font-size: 24px;
+    color: lightgray; /* Gray background stars */
+    display: inline-block;
+    width: 100px; /* Adjust width for 5 stars */
+    height: 24px; /* Same as font size to prevent overflow */
+    overflow: hidden;
+  }
+  
+  /* Background gray stars */
+  .RatingStarsStar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    color: lightgray;
+    width: 100%;
+    height: 100%;
+    padding-top:0;
+  }
+  
+  /* Active gold stars that will animate */
+  .RatingStarActive {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+    z-index: 2;
+    color: rgb(247, 199, 5); /* Gold color for the active stars */
+  }
+  
+  /* Overlay of the active stars (this gets animated) */
+  .RatingStarOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    color: rgb(247, 199, 5); /* Gold star color */
+  }

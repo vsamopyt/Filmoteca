@@ -2,7 +2,9 @@
   padding-top: 6px;
   padding-bottom: 12px;
   background-color:rgb(1, 6, 31);
+  /* min-height: 100vh; */
   min-height: 100vh;
+  height: auto;
 }
 
 .movieDetailsPageContainer {
@@ -24,14 +26,18 @@
   display: flex;
   gap: 6px;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
   padding-top: 6px;
   font-size: 18px;
 }
 .movieDetailsPageList {
-  padding-bottom: 12px;
+  display: flex;
+  gap:6px;
+  flex-direction: column;
+  padding-top: 24px;
+  padding-bottom: 24px;
 
-  border-bottom: 1px dotted blue;
+  /* border-bottom: 1px dotted blue; */
 }
 
 .pageBarloader {
@@ -45,7 +51,7 @@
   align-items: center;
   gap: 6px;
   color: #646cff;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .linkActive { 

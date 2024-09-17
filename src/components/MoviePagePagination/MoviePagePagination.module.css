@@ -51,3 +51,7 @@ height: 200px;
   outline: 2px solid rgb(189, 196, 225);
   border-radius: 25%;
 }
+
+.page-link:hover {
+  color: white;
+}
