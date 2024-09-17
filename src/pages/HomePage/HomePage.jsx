@@ -104,7 +104,9 @@
 //     </section>
 //   );
 // }
-import { motion } from "framer-motion"
+
+import MovieTitleAnimation from '../../components/MovieTitleAnimation/MovieTitleAnimation';
+import { motion } from 'framer-motion';
 import BarLoader from 'react-spinners/BarLoader';
 import MovieList from '../../components/MovieList/MovieList';
 
@@ -115,7 +117,7 @@ import ScrollToTop from 'react-scroll-to-top';
 import PaginatedItems from '../../components/MoviePagePagination/MoviePagePagination';
 // import LoadMoreBtn from '../../components/LoadMoreBtn/LoadMoreBtn';
 import css from './HomePage.module.css';
-import { GiOrange } from "react-icons/gi";
+import { GiOrange } from 'react-icons/gi';
 
 const scrollToTopStyle = {
   display: 'flex',
@@ -127,7 +129,7 @@ const scrollToTopStyle = {
   border: '6px solid rgb(189, 196, 225)',
   width: '54px',
   height: '54px',
-  transition: "opacity .3s ease-in-out"
+  transition: 'opacity .3s ease-in-out',
 };
 
 const scrollToTopComponentStyle = {
@@ -138,7 +140,7 @@ const scrollToTopComponentStyle = {
 const currentDate = new Date();
 const dateString = `${currentDate.getDate()}.${
   // (currentDate.getMonth() + 1).padStart(2, '0')
-  (currentDate.getMonth() + 1).toString().padStart(2,"0")
+  (currentDate.getMonth() + 1).toString().padStart(2, '0')
 }.${currentDate.getFullYear()}`;
 
 // const month =
@@ -208,68 +210,106 @@ export default function HomePage() {
     <section className={css.homePageSection}>
       <div className={css.homePageContainer}>
 
-        {/* <motion.span 
-        initial={{opacity: 0.1, color:"orange", fontSize:"12px"}}
-        animate={{rotate: 360, opacity:1, color:"orange",fontSize:"28px"}}
-        transition={{ duration: 5, type:"tween", easy: "easy",} }
-       
-        style={{ display: 'inline-block', transformOrigin: '50% 50%', fontSize: "28px", translate: "-50%, -50%" }}
-        >★</motion.span> */}
-
-        <motion.h1 className={css.homePageTitle}
-        initial={{opacity:0}}
-        animate={{opacity: 1}}
-        transition={{ duration: 0.5, type:"tween", easy: "easy",} }
+      <div style={{marginBottom: "48px"}}>
+          <MovieTitleAnimation title={`MOVIES TREND ${dateString}`} rating="100%" />
+          </div>
+        {/* <motion.h1
+          className={css.homePageTitle}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, type: 'tween', easy: 'easy' }}
         >
-          
-        <motion.span 
-        className={css.homePageSpan}
-        initial={{opacity: 1, color:"blue", fontSize:"24px"}}
-        animate={{rotate: 360, opacity:1, color:"blue",fontSize:"24px"}}
-        transition={{ duration: 2, type:"tween", easy: "easy",} }
-       
-        style={{ display: 'inline-block', transformOrigin: '50% 50%', fontSize: "24px", translate: "-50%, -50%" }}
-        >★</motion.span>
-
-              Trending movies
-              <motion.span 
-        className={css.homePageSpan}
-        initial={{opacity: 1, color:"blue", fontSize:"24px"}}
-        animate={{rotate: 360, opacity:1, color:"blue",fontSize:"24px"}}
-        transition={{ duration: 2, type:"tween", easy: "easy",} }
-       
-        style={{ display: 'inline-block', transformOrigin: '50% 50%', fontSize: "24px", translate: "-50%, -50%" }}
-        >★</motion.span>      
-              </motion.h1>
-
-        {/* <p className={css.homePageDate}>
-         -- {dateString}--</p> */}
-  <motion.p className={css.homePageDate}
-   initial={{opacity:0, x:"35px"}}
-   animate={{opacity: 1, x:"0x"}}
-   transition={{ duration: 1.5, type:"tween", easy: "easyOut",} }
-  
-   style={{ display: 'inline-block', transformOrigin: '50% 50%', fontSize: "24px", translate: "-50%, -50%" }}
-   
-  >
-     <motion.span 
-        className={css.homePageSpan}
-        initial={{opacity: 1, color:"blue", fontSize:"24px"}}
-        animate={{rotate: 360, opacity:1, color:"blue",fontSize:"24px"}}
-        transition={{ duration: 2, type:"tween", easy: "easy",} }
-       
-        style={{ display: 'inline-block', transformOrigin: '50% 50%', fontSize: "24px", translate: "-50%, -50%" }}
-        >★</motion.span>
-   {dateString}
-   <motion.span 
-        initial={{opacity: 1, color:"blue", fontSize:"24px"}}
-        animate={{rotate: 360, opacity:1, color:"blue",fontSize:"24px"}}
-        transition={{ duration: 2, type:"tween", easy: "easy",} }
-       
-        style={{ display: 'inline-block', transformOrigin: '50% 50%', fontSize: "28px", translate: "-50%, -50%" }}
-        >★</motion.span>
-
-   </motion.p>
+          <motion.span
+            className={css.homePageSpan}
+            initial={{ opacity: 1, color: 'blue', fontSize: '24px' }}
+            animate={{
+              rotate: 360,
+              opacity: 1,
+              color: 'blue',
+              fontSize: '24px',
+            }}
+            transition={{ duration: 2, type: 'tween', easy: 'easy' }}
+            style={{
+              display: 'inline-block',
+              transformOrigin: '50% 50%',
+              fontSize: '24px',
+              translate: '-50%, -50%',
+            }}
+          >
+            ★
+          </motion.span>
+          Trending movies
+          <motion.span
+            className={css.homePageSpan}
+            initial={{ opacity: 1, color: 'blue', fontSize: '24px' }}
+            animate={{
+              rotate: 360,
+              opacity: 1,
+              color: 'blue',
+              fontSize: '24px',
+            }}
+            transition={{ duration: 2, type: 'tween', easy: 'easy' }}
+            style={{
+              display: 'inline-block',
+              transformOrigin: '50% 50%',
+              fontSize: '24px',
+              translate: '-50%, -50%',
+            }}
+          >
+            ★
+          </motion.span>
+        </motion.h1>
+        <motion.p
+          className={css.homePageDate}
+          initial={{ opacity: 0, x: '35px' }}
+          animate={{ opacity: 1, x: '0x' }}
+          transition={{ duration: 1.5, type: 'tween', easy: 'easyOut' }}
+          style={{
+            display: 'inline-block',
+            transformOrigin: '50% 50%',
+            fontSize: '24px',
+            translate: '-50%, -50%',
+          }}
+        >
+          <motion.span
+            className={css.homePageSpan}
+            initial={{ opacity: 1, color: 'blue', fontSize: '24px' }}
+            animate={{
+              rotate: 360,
+              opacity: 1,
+              color: 'blue',
+              fontSize: '24px',
+            }}
+            transition={{ duration: 2, type: 'tween', easy: 'easy' }}
+            style={{
+              display: 'inline-block',
+              transformOrigin: '50% 50%',
+              fontSize: '24px',
+              translate: '-50%, -50%',
+            }}
+          >
+            ★
+          </motion.span>
+          {dateString}
+          <motion.span
+            initial={{ opacity: 1, color: 'blue', fontSize: '24px' }}
+            animate={{
+              rotate: 360,
+              opacity: 1,
+              color: 'blue',
+              fontSize: '24px',
+            }}
+            transition={{ duration: 2, type: 'tween', easy: 'easy' }}
+            style={{
+              display: 'inline-block',
+              transformOrigin: '50% 50%',
+              fontSize: '28px',
+              translate: '-50%, -50%',
+            }}
+          >
+            ★
+          </motion.span>
+        </motion.p> */}
 
         {homePageError && (
           <p>Ooops! Something went wrong! Reload the page please!</p>

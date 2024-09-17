@@ -1,3 +1,6 @@
+import MovieTitleAnimation from '../MovieTitleAnimation/MovieTitleAnimation';
+
+
 import { NavLink, Link } from 'react-router-dom';
 import { SiThemoviedatabase } from "react-icons/si";
 import { GiFilmProjector } from "react-icons/gi";
@@ -16,6 +19,10 @@ export default function Navigation() {
         <nav className={css.navigationLinks}>
         {/* <SiThemoviedatabase /> */}
         <Link to="/" className={css.buildLinkClass}>
+        
+      
+        
+        
         <BiCameraMovie className={css.buildLinkClassLogo}/>
           </Link>
           <NavLink to="/" className={buildLinkClass}>

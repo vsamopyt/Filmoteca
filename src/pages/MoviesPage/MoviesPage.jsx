@@ -157,7 +157,7 @@ export default function MoviesPage() {
           <p>Ooops! Something went wrong! Reload the page please!</p>
         )}
         <div className={css.moviePageSearcWraper}>
-          <div>
+          <div style={{marginBottom: "12px"}}>
           <MovieTitleAnimation title="SEARCH MOVIE BY NAME" rating="100%" />
           </div>
     {/* <div>

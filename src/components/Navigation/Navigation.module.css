@@ -32,11 +32,21 @@ link {
     color: orange;
 }
 
+
+.buildLinkClass {
+display: flex;
+
+align-items: center;
+
+}
+
 .buildLinkClassLogo {
     display: flex;
     font-size: 30px;
     text-decoration: inherit;
     }
+
+
 
 @media (min-width: 760px) {
     .navigationContainer {
