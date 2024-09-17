@@ -1,9 +1,23 @@
+
+import {motion} from "framer-motion"
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import BarLoader from 'react-spinners/BarLoader';
 import { fetchMovieReviwsById } from '../../movies-api';
 import MovieReviewsCard from '../MovieReviewsCard/MovieReviewsCard';
 import css from './MovieReviews.module.css';
+
+const listVariants = {
+  visible: i => ({
+    opacity: 1,
+    x:0,
+    transition: {
+      delay: i*0.5
+    }
+  }),
+  hidden: {opacity: 0, x:100}
+}
+
 
 export default function MovieReviews() {
   const { movieId } = useParams();
@@ -60,13 +74,13 @@ export default function MovieReviews() {
       </ul> */}
 
 
-      <>
+      {/* <>
       {!movieReviewsLoading && movieReviews.length > 0 && 
       <ul className={css.MovieReviewsList}>
          { movieReviews.map(item => {
             return (
               <li key={item.id}>
-                {/* {item.author} */}
+             
                 <MovieReviewsCard item={item} />
               </li>
             );
@@ -74,7 +88,30 @@ export default function MovieReviews() {
 
       </ul> }
 
+      </> */}
+
+<>
+      {!movieReviewsLoading && movieReviews.length > 0 && 
+      <ul className={css.MovieReviewsList}>
+         { movieReviews.map((item, i) => {
+            return (
+              <motion.li key={item.id}
+              variants= {listVariants}
+              initial="hidden"
+              animate ="visible"
+              custom = {i}
+              
+              >
+                {/* {item.author} */}
+                <MovieReviewsCard item={item} />
+              </motion.li>
+            );
+          })}
+
+      </ul> }
+
       </>
+
 {/* {movieReviews.length < 0  &&  <p className={css.infoMessage}>Sorry, there are no reviews yet.</p>} */}
 
 {!movieReviewsLoading && movieReviews.length === 0  &&  <p className={css.infoMessage}>Sorry, there are no reviews yet.</p>}

@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { fetchMovieCastById } from '../../movies-api';
 import { useParams } from 'react-router-dom';
@@ -5,11 +6,29 @@ import BarLoader from 'react-spinners/BarLoader';
 import MovieCastCard from '../MovieCastCard/MovieCastCard';
 import css from './MovieCast.module.css';
 
+
+const listVariants = {
+  visible: i => ({
+    opacity: 1,
+    y:0,
+    transition: {
+      delay: i*0.2
+    }
+  }),
+  hidden: {opacity: 0, y:100}
+}
+
+
+
+
 export default function MovieCast() {
   const { movieId } = useParams();
   const [movieCastDetail, setMovieCastDetail] = useState([]);
   const [movieCastLoading, setMovieCastLoading] = useState(false);
   const [movieCastError, setMovieCastError] = useState(false);
+
+
+
   useEffect(() => {
     async function getMovieCastById() {
       if (!movieId) {
@@ -76,7 +95,7 @@ export default function MovieCast() {
 </> */}
       
 
-<> {movieCastDetail.length > 0 && 
+{/* <> {movieCastDetail.length > 0 && 
 <ul className={css.movieCastList}>
         {
           movieCastDetail.map(item => {
@@ -88,7 +107,27 @@ export default function MovieCast() {
           })}
       </ul> }
  
+</> */}
+
+<> {movieCastDetail.length > 0 && 
+<ul className={css.movieCastList}>
+        {
+          movieCastDetail.map((item, i) => {
+            return (
+              <motion.li key={item.id} className={css.movieCastListItem}
+              variants= {listVariants}
+              initial="hidden"
+              animate ="visible"
+              custom = {i}
+              >
+                <MovieCastCard item={item} />
+              </motion.li>
+            );
+          })}
+      </ul> }
+ 
 </>
+
 
 {(movieCastDetail.length < 0) && (
         <p className={css.infoMessage}>Sorry, there is no info about cast yet</p>

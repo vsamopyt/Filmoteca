@@ -77,7 +77,7 @@ export async function fetchMoviesBySearch(searchName,currentPageSearch ) {
 const response =await axios.get('https://api.themoviedb.org/3/search/movie', {
   params: {
     query: searchName,
-    include_adult:false,
+    include_adult:true,
     language: 'en-US',
     page: currentPageSearch,
 

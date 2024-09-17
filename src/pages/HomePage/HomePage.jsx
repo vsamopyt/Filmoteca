@@ -210,8 +210,8 @@ export default function HomePage() {
     <section className={css.homePageSection}>
       <div className={css.homePageContainer}>
 
-      <div style={{marginBottom: "48px"}}>
-          <MovieTitleAnimation title={`MOVIES TREND ${dateString}`} rating="100%" />
+      <div style={{marginBottom: "48px", textAlign: "center"}}>
+          <MovieTitleAnimation style ={{}}title={`MOVIES TREND ${dateString}`} rating="100%" />
           </div>
         {/* <motion.h1
           className={css.homePageTitle}
