@@ -66,6 +66,8 @@
 //   );
 // }
 
+import MovieTitleAnimation from '../../components/MovieTitleAnimation/MovieTitleAnimation';
+
 import { useState, useEffect, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import SearchBar from '../../components/SearchBar/SearchBar';
@@ -155,7 +157,14 @@ export default function MoviesPage() {
           <p>Ooops! Something went wrong! Reload the page please!</p>
         )}
         <div className={css.moviePageSearcWraper}>
-          <h1 className={css.moviesPageTitle}>Search movies by name</h1>
+          <div>
+          <MovieTitleAnimation title="SEARCH MOVIE BY NAME" rating="100%" />
+          </div>
+    {/* <div>
+
+          <MovieTitleAnimation title="BY NAME" rating="100%" />
+    </div> */}
+          {/* <h1 className={css.moviesPageTitle}>Search movies by name</h1> */}
           <div className={css.moviesPageSearchBar}>
             <SearchBar onChange={handleForm} />
           </div>

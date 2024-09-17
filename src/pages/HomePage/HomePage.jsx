@@ -223,6 +223,7 @@ export default function HomePage() {
         >
           
         <motion.span 
+        className={css.homePageSpan}
         initial={{opacity: 1, color:"blue", fontSize:"12px"}}
         animate={{rotate: 360, opacity:1, color:"blue",fontSize:"28px"}}
         transition={{ duration: 2, type:"tween", easy: "easy",} }

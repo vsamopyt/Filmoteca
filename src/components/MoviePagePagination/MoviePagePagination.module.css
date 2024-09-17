@@ -52,6 +52,6 @@ height: 200px;
   border-radius: 25%;
 }
 
-.page-link:hover {
+.page-item :hover {
   color: white;
 }

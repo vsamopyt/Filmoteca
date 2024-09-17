@@ -53,6 +53,11 @@
   
     }
 
+    .homePageSpan {
+        display: flex;
+        align-items: center;
+    }
+
 @media (min-width: 760px) {
     .homePageContainer {
         max-width: 760px;
