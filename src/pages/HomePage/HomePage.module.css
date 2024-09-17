@@ -20,15 +20,17 @@
     /* margin-bottom: 32px; */
     /* color: white; */
     margin-bottom: 12px;
+    font-size:24px ;
     color: rgb(189, 196, 225);
     /* color: orange */
     text-transform: uppercase;
+    font-weight: 400;
 }
 
 .homePageDate {
     padding-bottom: 42px;
-    font-size: 28px;
-    font-weight: bold;
+    font-size: 24px;
+    /* font-weight: bold; */
     color: rgb(189, 196, 225);
 }
 
@@ -56,6 +58,7 @@
     .homePageSpan {
         display: flex;
         align-items: center;
+        
     }
 
 @media (min-width: 760px) {

@@ -224,29 +224,46 @@ export default function HomePage() {
           
         <motion.span 
         className={css.homePageSpan}
-        initial={{opacity: 1, color:"blue", fontSize:"12px"}}
-        animate={{rotate: 360, opacity:1, color:"blue",fontSize:"28px"}}
+        initial={{opacity: 1, color:"blue", fontSize:"24px"}}
+        animate={{rotate: 360, opacity:1, color:"blue",fontSize:"24px"}}
         transition={{ duration: 2, type:"tween", easy: "easy",} }
        
-        style={{ display: 'inline-block', transformOrigin: '50% 50%', fontSize: "28px", translate: "-50%, -50%" }}
+        style={{ display: 'inline-block', transformOrigin: '50% 50%', fontSize: "24px", translate: "-50%, -50%" }}
         >★</motion.span>
 
-              Trending movies</motion.h1>
+              Trending movies
+              <motion.span 
+        className={css.homePageSpan}
+        initial={{opacity: 1, color:"blue", fontSize:"24px"}}
+        animate={{rotate: 360, opacity:1, color:"blue",fontSize:"24px"}}
+        transition={{ duration: 2, type:"tween", easy: "easy",} }
+       
+        style={{ display: 'inline-block', transformOrigin: '50% 50%', fontSize: "24px", translate: "-50%, -50%" }}
+        >★</motion.span>      
+              </motion.h1>
 
         {/* <p className={css.homePageDate}>
          -- {dateString}--</p> */}
   <motion.p className={css.homePageDate}
    initial={{opacity:0, x:"35px"}}
-   animate={{opacity: 1, x:"23px"}}
-   transition={{ duration: 1.5, type:"tween", easy: "easy",} }
+   animate={{opacity: 1, x:"0x"}}
+   transition={{ duration: 1.5, type:"tween", easy: "easyOut",} }
   
-   style={{ display: 'inline-block', transformOrigin: '50% 50%', fontSize: "28px", translate: "-50%, -50%" }}
+   style={{ display: 'inline-block', transformOrigin: '50% 50%', fontSize: "24px", translate: "-50%, -50%" }}
    
   >
+     <motion.span 
+        className={css.homePageSpan}
+        initial={{opacity: 1, color:"blue", fontSize:"24px"}}
+        animate={{rotate: 360, opacity:1, color:"blue",fontSize:"24px"}}
+        transition={{ duration: 2, type:"tween", easy: "easy",} }
+       
+        style={{ display: 'inline-block', transformOrigin: '50% 50%', fontSize: "24px", translate: "-50%, -50%" }}
+        >★</motion.span>
    {dateString}
    <motion.span 
-        initial={{opacity: 1, color:"blue", fontSize:"12px"}}
-        animate={{rotate: 360, opacity:1, color:"blue",fontSize:"28px"}}
+        initial={{opacity: 1, color:"blue", fontSize:"24px"}}
+        animate={{rotate: 360, opacity:1, color:"blue",fontSize:"24px"}}
         transition={{ duration: 2, type:"tween", easy: "easy",} }
        
         style={{ display: 'inline-block', transformOrigin: '50% 50%', fontSize: "28px", translate: "-50%, -50%" }}

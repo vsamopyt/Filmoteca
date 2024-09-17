@@ -14,12 +14,14 @@
 .searchBarButton {
     cursor: pointer;
     padding: 10px 12px;
-    font-size: 18px;
+    font-size: 14px;
+    font-weight: 400;
     background-color: rgb(46, 128, 250);
     border: none;
     color: white;
     border-radius: 4px;
     outline: 1px solid black;
+    text-transform: uppercase;
 }
 
 .searchBarForm {
