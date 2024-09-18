@@ -25,7 +25,7 @@ const listVariants = {
       delay: i*0.2
     }
   }),
-  hidden: {opacity: 0, x:100}
+  hidden: {opacity: 0, x:10}
 }
 
 export default function MovieList({ array, currentPage }) {
