@@ -15,7 +15,7 @@ const listVariants = {
       delay: i*0.2
     }
   }),
-  hidden: {opacity: 0, y:100}
+  hidden: {opacity: 0, y:20}
 }
 
 
@@ -129,7 +129,7 @@ export default function MovieCast() {
 </>
 
 
-{(movieCastDetail.length < 0) && (
+{!movieCastLoading && !movieCastDetail.length  && (
         <p className={css.infoMessage}>Sorry, there is no info about cast yet</p>
       )}
 

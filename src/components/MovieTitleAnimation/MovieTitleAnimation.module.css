@@ -9,7 +9,7 @@
     color: rgb(14, 13, 13); /* Gray background stars */
     display: inline-block;
    /*width: 300px; /* Adjust width for 5 stars */
-   width:300px;
+   width:290px;
     height: 48px; /* Same as font size to prevent overflow */
     overflow: hidden;
   }
