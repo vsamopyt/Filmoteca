@@ -1,34 +1,32 @@
 .movieReviewsLoadingContainer {
-    display: flex;
-    justify-content: center;
-    padding: 12px 0;
-   }
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
+}
 
 .MovieReviewsList {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .MovieReviewsTitle {
-    margin-bottom: 24px;
-    text-transform: uppercase;
-    color: rgb(147, 167, 187);
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  color: rgb(147, 167, 187);
   color: rgb(189, 196, 225);
 }
 
 .MovieReviewsWraper {
-    padding-top:32px;
-    border-top: 1px solid white;
+  padding-top: 32px;
+  border-top: 1px solid white;
 }
 
 .infoMessage {
-    color: red;
+  color: red;
 }
 
-
 .pageBarloader {
-    size:200px;
-    color:orange;
+  size: 200px;
+  color: orange;
 }

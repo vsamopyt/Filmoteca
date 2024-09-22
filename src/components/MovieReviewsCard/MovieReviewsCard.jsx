@@ -1,5 +1,7 @@
 import { RxAvatar } from 'react-icons/rx';
+
 import css from './MovieReviewsCard.module.css';
+
 export default function MovieReviewsCard({ item }) {
   const {
     author,

@@ -18,19 +18,12 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
-/* a:hover {
-  color: #535bf2;
-} */
 
 body {
   margin: 0;
-  /* display: flex;
-  place-items: center; */
   min-width: 320px;
   min-height: 100vh;
 }
-
-
 
 h1 {
   font-size: 3.2em;
@@ -56,16 +49,19 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-
-
-
 img {
   width: 100%;
   display: block;
 }
-h1,h2,h3,h4,h5,h6, p {
-  margin:0;
-  padding:0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
 }
 h1 {
   font-size: 28px;
@@ -79,18 +75,17 @@ h3 {
   font-size: 18px;
 }
 
-ul,ol {
+ul,
+ol {
   list-style: none;
   padding-left: 0;
   margin: 0;
 }
 
-
 .section {
   padding-top: 12px;
   padding-bottom: 12px;
 }
-
 
 .loadingContainer {
   display: flex;
@@ -98,15 +93,12 @@ ul,ol {
   padding: 12px 0;
 }
 
-
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
-  /* a:hover {
-    color: #747bff;
-  } */
+
   button {
     background-color: #f9f9f9;
   }

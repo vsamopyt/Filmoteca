@@ -1,4 +1,5 @@
 import css from './MovieCastCard.module.css';
+
 export default function MovieCastCard({ item }) {
   const { character, name, profile_path } = item;
   return (

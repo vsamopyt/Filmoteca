@@ -1,239 +1,154 @@
 .movieCardRatingContainer {
+  position: absolute;
 
-    position: absolute;
-   /* right:5%; */
-    right:0%;
-    top:2%;
-    display: flex;
-    align-items: center;
-       /* align-items:baseline; */
-    /* padding: 0 6px; */
-    padding-right: 6px;
-    /* background-color: linear-gradient(rgba(167, 37, 37, 0.404), rgba(167, 37, 37, 1)); */
-    /* background: linear-gradient(to left, #333, #333 35%, #eee 85%); */
-     /* background: linear-gradient(to left, #303079,#eee 95%, #eee 100%); */
-     background: linear-gradient(to left, #12122c58,#030030d2 80%,#030030);
-    /* background-color:rgb(245, 177, 6); */
-    /* background-color: rgba(63, 61, 61, 0.404); */
+  right: 0%;
+  top: 2%;
+  display: flex;
+  align-items: center;
 
-    /* border-radius: 4px; */
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-    border-left: 2px solid rgba(255, 255, 255, 0.768);
-    border-top: 2px solid rgba(255, 255, 255, 0.768);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.768);
+  padding-right: 6px;
+
+  background: linear-gradient(to left, #12122c58, #030030d2 80%, #030030);
+
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-left: 2px solid rgba(255, 255, 255, 0.768);
+  border-top: 2px solid rgba(255, 255, 255, 0.768);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.768);
 }
 
-/* .movieCardYearContainer {
-    position: absolute;
-    left: 0;
-    bottom:2%;
-    padding: 2px 8px;
-   
-    background-color:rgba(167, 37, 37, 0.404);
-    color: white;
-    border-radius: 4px;
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
-    border-right: 1px solid white;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-} */
-
 .movieCardYearContainer {
-    position: absolute;
-    right: 0;
-  bottom:1%;
-    padding: 2px 8px;
-   
-    background-color:rgba(167, 37, 37, 0.404);
-    color: white;
-    border-radius: 4px;
-    border-top-left-radius: 40px;
-    border-bottom-left-radius: 40px;
-    /* border-right: 1px solid white; */
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
-    border-left: 2px solid white;
+  position: absolute;
+  right: 0;
+  bottom: 1%;
+  padding: 2px 8px;
+
+  background-color: rgba(167, 37, 37, 0.404);
+  color: white;
+  border-radius: 4px;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
 }
 
 .movieCardIndexContainer {
-display: flex;
-align-items: center;
-justify-content: center; 
-margin-right: 4px;;
-    font-size: 14px;
-    font-weight: bold; 
-    color: rgb(252, 252, 250);
-    width: 38px;
-    height:38px;
-    /* padding: 0 8px; */
-    border-radius: 50%;
-    background-color:orange;
-    /* background-color: rgba(167, 37, 37, 0.404);; */
-    /* border: 1px solid  rgba(255, 255, 255, 0.768); */
-    /* position: absolute; */
-  
-    /* right:38%;
-    top:2%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-   
-    border-radius: 20%;
-    background-color: rgba(63, 61, 61, 0.404);
-    
-    color: white;
-    border-radius: 50%;
-    font-size: 20px;
-    font-weight: bold; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(252, 252, 250);
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+  background-color: orange;
 }
 
 .movieCardImage {
-    border: 1px solid rgb(152, 184, 242);
-    border-radius: 4px;
-    width:100%;
-    height:100%;
+  border: 1px solid rgb(152, 184, 242);
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
 }
 .movieCardName {
-    position: absolute;
-    left:0%;
-    top:10%;
-    padding-inline: 12px;
-    max-width: 300px;
-    font-size: 34px;
-    font-weight: bold;
-    white-space: wrap;
-    -webkit-line-clamp: 3;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+  position: absolute;
+  left: 0%;
+  top: 10%;
+  padding-inline: 12px;
+  max-width: 300px;
+  font-size: 34px;
+  font-weight: bold;
+  white-space: wrap;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .movieCardNumberContainer {
-    /* display: flex;
-align-items: center;
-justify-content: center;
-margin-right: 4px;;
-    font-size: 14px;
-    font-weight: bold; 
-    color: white;
-    width: 38px;
-    height:38px;
-   
-    border-radius: 50%;
-    background-color: rgb(245, 177, 6);
-    border: 1px solid white; */
-    position: absolute;
-  
-    left:-2%;
-    top:2%;
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
-    /* background-color: rgb(255, 145, 2); */
-       /* background-color: white; */
-       /* background: linear-gradient(to left, rgb(245, 177, 6),rgba(255, 184, 6, 0.343)); */
-       /* background: linear-gradient(to left,  rgb(245, 177, 6)50%,#030030 75%,#030030); */
-       /* background: linear-gradient(to left,  orange, rgb(152, 184, 242) 75%, rgb(152, 184, 242)); */
-       background: linear-gradient(to left,  orange,  rgb(12, 8, 0));
-    border: 2px solid  rgb(152, 184, 242);
-    border-bottom: 2px solid rgb(152, 184, 242);
-    border-left:rgba(152, 183, 242, 0) ;
-    border-right: 2px solid rgb(152, 184, 242);
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-   
-    border-radius: 20%;
-    background-color: rgba(63, 61, 61, 0.404);
-    
-    color: white;
-    border-radius: 50%;
-    font-size: 20px;
-    font-weight: bold;  */
+  position: absolute;
+  left: -2%;
+  top: 2%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background: linear-gradient(to left, orange, rgb(12, 8, 0));
+  border: 2px solid rgb(152, 184, 242);
+  border-bottom: 2px solid rgb(152, 184, 242);
+  border-left: rgba(152, 183, 242, 0);
+  border-right: 2px solid rgb(152, 184, 242);
 }
 
 .movieCardNumberlogo {
-    position: absolute;
-    top:-8px;
-    left: -5%;
-    font-size: 56px;
-    color: #0961e691;
-    color: #646cff;
-   
-    /* color:linear-gradient(to left,  orange,  rgb(12, 8, 0)) ; */
-    /* color: rgb(145, 129, 237); */
-    /* color: rgb(50, 1, 118); */
+  position: absolute;
+  top: -8px;
+  left: -5%;
+  font-size: 56px;
+  color: #0961e691;
+  color: #646cff;
 
-    /* background-color: black; */
-    border-radius: 35%;
+  border-radius: 35%;
 }
 
 .movieCardFilmContainer {
-    position: absolute;
-    top:-3%;
-    left:-2%;
-    color: white;
+  position: absolute;
+  top: -3%;
+  left: -2%;
+  color: white;
 }
 
 .movieCardIndex {
-    z-index: 10;
-  
-    color: white;
-    font-weight: bold;
+  z-index: 10;
+
+  color: white;
+  font-weight: bold;
 }
 
 .movieCardFilmWraper {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    z-index: 4;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  z-index: 4;
 }
 
 .movieCardTitle {
-    /* margin-top: 8px; */
-    
-    margin-right: 6px;
-    font-size: 16px;
-   
-    color: rgb(189, 196, 225);
-    text-transform: uppercase;
-    font-weight: normal;
+  margin-right: 6px;
+  font-size: 16px;
+
+  color: rgb(189, 196, 225);
+  text-transform: uppercase;
+  font-weight: normal;
 }
 
 .movieCardInfoWrapper {
-    display: flex;
-    margin-top: 8px;
-    font-size: 16px;
-    color: rgb(189, 196, 225);
-   flex-direction: column;
-   
-
+  display: flex;
+  margin-top: 8px;
+  font-size: 16px;
+  color: rgb(189, 196, 225);
+  flex-direction: column;
 }
 
 .movieCardInfoRating,
 .movieCardInfoYear {
-margin-right: 6px;
-opacity: 0.5;
+  margin-right: 6px;
+  opacity: 0.5;
 }
 
-
-
 @media (min-width: 760px) {
-    .movieCardImgWrapper {
-height: 521px;
-    }
+  .movieCardImgWrapper {
+    height: 521px;
   }
+}
 
-  @media (min-width: 1280px) {
-    .movieCardImgWrapper {
-height: 438px;
-    }
+@media (min-width: 1280px) {
+  .movieCardImgWrapper {
+    height: 438px;
   }
+}

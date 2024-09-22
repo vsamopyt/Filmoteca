@@ -1,79 +1,63 @@
 .homePageSection {
-    padding-top:94px;
-    padding-bottom: 48px;
-    background-color:rgb(1, 6, 31);
-    min-height: 100vh;
-     
-   
-
+  padding-top: 94px;
+  padding-bottom: 48px;
+  background-color: rgb(1, 6, 31);
+  min-height: 100vh;
 }
 .homePageContainer {
-    /* padding-top: 84px; */
-    max-width: 360px;
-    width:100%;
-    padding-inline: 20px;
-    margin-inline: auto;
+  max-width: 360px;
+  width: 100%;
+  padding-inline: 20px;
+  margin-inline: auto;
 }
 
 .homePageTitle {
-    /* font-size: 24px; */
-    /* margin-bottom: 32px; */
-    /* color: white; */
-    margin-bottom: 12px;
-    font-size:24px ;
-    color: rgb(189, 196, 225);
-    /* color: orange */
-    text-transform: uppercase;
-    font-weight: 400;
+  margin-bottom: 12px;
+  font-size: 24px;
+  color: rgb(189, 196, 225);
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 .homePageDate {
-    padding-bottom: 42px;
-    font-size: 24px;
-    /* font-weight: bold; */
-    color: rgb(189, 196, 225);
+  padding-bottom: 42px;
+  font-size: 24px;
+
+  color: rgb(189, 196, 225);
 }
 
 .homePageLoadingContainer {
- display: flex;
- justify-content: center;
- padding: 12px 0;
- padding-top: 48px;
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
+  padding-top: 48px;
 }
 
 .pageBarloader {
-    color: aqua;
-    background-color: chocolate;
-  
-  }
+  color: aqua;
+  background-color: chocolate;
+}
 
-.moviePaginationContainer{
-    /* margin-top: 32px; */
-    display: flex;
-    justify-content: center;
-    /* margin-bottom: 12px; */
-  
-    }
+.moviePaginationContainer {
+  display: flex;
+  justify-content: center;
+}
 
-    .homePageSpan {
-        display: flex;
-        align-items: center;
-        
-    }
+.homePageSpan {
+  display: flex;
+  align-items: center;
+}
 
 @media (min-width: 760px) {
-    .homePageContainer {
-        max-width: 760px;
-        width:100%;
-        /* padding-inline: 20px; */
-        margin-inline: auto;
-      
-    }
-    
+  .homePageContainer {
+    max-width: 760px;
+    width: 100%;
+    margin-inline: auto;
+  }
 }
 
 @media (min-width: 1280px) {
-    .homePageContainer  {
-      max-width: 1280px;
-    }
+  .homePageContainer {
+    max-width: 1280px;
+  }
 }

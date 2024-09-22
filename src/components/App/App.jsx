@@ -1,10 +1,20 @@
 import { Route, Routes } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 
+import BarLoader from 'react-spinners/BarLoader';
+
 import Navigation from '../Navigation/Navigation';
 import Footer from '../Footer/Footer';
+import css from './App.module.css';
 
 const HomePage = lazy(() => import('../../pages/HomePage/HomePage'));
+
+// const HomePage = lazy(() =>
+//   new Promise((resolve) => {
+//     setTimeout(() => resolve(import('../../pages/HomePage/HomePage')), 3000); // 3-second delay
+//   })
+// );
+
 const MovieDetailsPage = lazy(() =>
   import('../../pages/MovieDetailsPage/MovieDetailsPage')
 );
@@ -20,7 +30,13 @@ function App() {
     <>
       <Navigation />
 
-      <Suspense fallback={<p>Loading code</p>}>
+      <Suspense
+        fallback={
+          <div className={css.appLoadingContainer}>
+            <BarLoader color={'orange'} size={200} className={css.appLoader} />
+          </div>
+        }
+      >
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/movies" element={<MoviesPage />} />
@@ -39,8 +55,7 @@ function App() {
 
 export default App;
 
-
-// motion frame
+// header with motion frame
 
 // import { Route, Routes, useLocation } from 'react-router-dom';
 // import { lazy, Suspense } from 'react';
@@ -95,7 +110,3 @@ export default App;
 // }
 
 // export default App;
-
-
-
-

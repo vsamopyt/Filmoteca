@@ -2,14 +2,12 @@ import { Link, Outlet, useLocation, NavLink } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState, useRef, Suspense } from 'react';
 import BarLoader from 'react-spinners/BarLoader';
-import { fetchMovieById } from '../../movies-api';
-// import { MdMovieFilter } from 'react-icons/md';
-// import { MdOutlineMovieFilter } from 'react-icons/md';
 import { MdMovieEdit } from 'react-icons/md';
 import { FaLongArrowAltLeft } from 'react-icons/fa';
-import { IoIosPeople } from "react-icons/io";
+import { IoIosPeople } from 'react-icons/io';
 import clsx from 'clsx';
 import MovieDetailsCard from '../../components/MovieDetailsCard/MovieDetailsCard';
+import { fetchMovieById } from '../../movies-api';
 import css from './MovieDetailsPage.module.css';
 
 export default function MovieDetailsPage() {
@@ -63,17 +61,14 @@ export default function MovieDetailsPage() {
         {movieDetail && <MovieDetailsCard data={movieDetail} />}
         <ul className={css.movieDetailsPageList}>
           <li>
-            <NavLink  to={'cast'} className ={buildLinkClass} state={location}>
-            <IoIosPeople 
-            className={css.movieDetailsPageListIcon}/>
-            Movie Cast
-              
-              {/* <div className={css.MovieCast}> Movie Cast</div> */}
+            <NavLink to={'cast'} className={buildLinkClass} state={location}>
+              <IoIosPeople className={css.movieDetailsPageListIcon} />
+              Movie Cast
             </NavLink>
           </li>
           <li>
-            <NavLink to={'reviews'}  className ={buildLinkClass} state={location}>
-              <MdMovieEdit className={css.movieDetailsPageListIcon}/>
+            <NavLink to={'reviews'} className={buildLinkClass} state={location}>
+              <MdMovieEdit className={css.movieDetailsPageListIcon} />
               Movie Review
             </NavLink>
           </li>

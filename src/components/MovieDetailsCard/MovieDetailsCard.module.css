@@ -3,7 +3,6 @@
   color: rgb(147, 167, 187);
   color: rgb(189, 196, 225);
   text-transform: uppercase;
-  /* color: orange */
 }
 
 .movieDetailsCardList {
@@ -24,26 +23,21 @@
   margin-bottom: 12px;
 }
 
-
-
-/* .SiGoogleearth {
-  color: orange;
-  width:2rem;
-} */
-
-.ioEarth, .faStarHalfAlt, .faClockRotateLeft, .SiGoogleearth  {
+.ioEarth,
+.faStarHalfAlt,
+.faClockRotateLeft,
+.SiGoogleearth {
   color: orange;
   font-size: 1rem;
   margin-right: 6px;
 }
 
-.movieDetailsCardGenres, 
-.movieDetailsCardCountry, 
+.movieDetailsCardGenres,
+.movieDetailsCardCountry,
 .movieDetailsCardRating,
- .movieDetailsCardRuntime {
+.movieDetailsCardRuntime {
   color: orange;
 }
-
 
 /* @media (min-width: 760px) {
     .homePageContainer {
@@ -62,27 +56,12 @@
     height: auto;
   }
 
-  /* .MovieDetailsCardContainer {
-    background-repeat: no-repeat;
-    background-image: linear-gradient(
-        to left,
-        rgba(254, 254, 254, 0.969),
-        rgba(255, 254, 254, 0.872),
-        rgb(255, 254, 254)
-      ),
-      url('../../../film-4208954_1280_10.jpg');
-    background-position: bottom right 0;
-  } */
-
   .movieDetailsCardList {
     font-size: 18px;
-   
   }
 
   .movieDetailsCardOverview {
     font-size: 18px;
     max-width: 900px;
   }
-
-
 }

@@ -1,64 +1,51 @@
 .moviesPageLoadingContainer {
-    display: flex;
-    justify-content: center;
-    padding: 12px 0;
-    padding-top: 50px;
-   
-
-   }
-
-   .moviesPageSection {
-    padding-top:94px;
-    padding-bottom: 24px;
-    background-color:rgb(1, 6, 31);
-    min-height: 100vh;
-   
-
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
+  padding-top: 50px;
 }
+
+.moviesPageSection {
+  padding-top: 94px;
+  padding-bottom: 24px;
+  background-color: rgb(1, 6, 31);
+  min-height: 100vh;
+}
+
 .moviesPageContainer {
-    max-width: 360px;
-    width:100%;
-    padding-inline: 20px;
-    margin-inline: auto;
+  max-width: 360px;
+  width: 100%;
+  padding-inline: 20px;
+  margin-inline: auto;
 }
 
 .moviesPageTitle {
-    margin-bottom: 34px;
-    color: rgb(189, 196, 225);
-    text-transform: uppercase;
+  margin-bottom: 34px;
+  color: rgb(189, 196, 225);
+  text-transform: uppercase;
 }
 
 .moviePageSearcWraper {
-    padding-bottom: 32px;
+  padding-bottom: 32px;
 }
 
 .moviesPageSearchBar {
-/* padding-bottom: 12px; */
-margin-bottom: 12px;
-
-
+  margin-bottom: 12px;
 }
 
-.moviePaginationContainer{
-    /* margin-top: 32px; */
-    display: flex;
-    justify-content: center;
-    /* margin-bottom: 12px; */
-  
-    }
-    
-
-    
+.moviePaginationContainer {
+  display: flex;
+  justify-content: center;
+}
 
 @media (min-width: 760px) {
-    .moviesPageContainer {
-        max-width: 760px;
-    }
-    
+  .moviesPageContainer {
+    max-width: 760px;
+  }
 }
 
 @media (min-width: 1280px) {
-    .moviesPageContainer {
-      max-width: 1280px;
-    }
+  .moviesPageContainer {
+    max-width: 1280px;
+  }
 }
