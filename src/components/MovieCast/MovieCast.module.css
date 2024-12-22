@@ -41,3 +41,27 @@
     width: calc((100% - 100px) / 6);
   }
 }
+
+
+/* ----- MODAL WINDOW */
+.modalImgWrapper {
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modalCastImg {
+  border-radius: 12px;
+}
+.modalCastText {
+  margin-top: 12px;
+  /* display: flex;
+  justify-content: flex-start;
+  gap:6px; */
+  color: rgb(180, 195, 210);
+  font-size: 18px;
+  font-weight: 600;
+
+}
+/* ++++++++ */

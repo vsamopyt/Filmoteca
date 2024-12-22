@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import BarLoader from 'react-spinners/BarLoader';
 
 import { fetchMovieCastById } from '../../movies-api';
+import GeneralModalWindow from '../GeneraLModalWindow/GeneraLModalWindow';
 import MovieCastCard from '../MovieCastCard/MovieCastCard';
 import css from './MovieCast.module.css';
 
@@ -25,6 +26,39 @@ export default function MovieCast() {
   const [movieCastLoading, setMovieCastLoading] = useState(false);
   const [movieCastError, setMovieCastError] = useState(false);
 
+  // -------modal window
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [img, setImg] = useState("");
+  const [name, setName] = useState("");
+  const [character, setCharacter] = useState("");
+  const onClose = () => {
+    setIsOpen(false);
+  };
+  const onOpen = (item) => {
+    setIsOpen(true);
+    setImg(`https://image.tmdb.org/t/p/w500/${item.profile_path}`);
+    setName(item.name); 
+    setCharacter(item.character)
+
+
+    // console.log(event.target);
+    // console.log(event.target.src);
+    // setImg(<img src={event.target.src}/>)
+    // setImg(<img src={event.target}/>)
+   
+    
+
+  };
+
+  const afterOpenModal = () => {
+    document.body.style.overflow = 'hidden';
+  };
+  const afterCloseModal = () => {
+    document.body.style.overflow = 'auto';
+  };
+// +++++++++
+
   useEffect(() => {
     async function getMovieCastById() {
       if (!movieId) {
@@ -42,6 +76,8 @@ export default function MovieCast() {
     }
     getMovieCastById();
   }, [movieId]);
+
+
 
   return (
     <div className={css.movieCastLoadingWraper}>
@@ -72,6 +108,11 @@ export default function MovieCast() {
                   initial="hidden"
                   animate="visible"
                   custom={i}
+                  // onClick={()=>{
+                  //   setIsOpen(true);
+                  //   setImg(<img src={`https://image.tmdb.org/t/p/w500/${item.profile_path}`} />)
+                  // }}
+                  onClick={()=>{onOpen(item)}}
                 >
                   <MovieCastCard item={item} />
                 </motion.li>
@@ -86,6 +127,23 @@ export default function MovieCast() {
           Sorry, there is no info about cast yet
         </p>
       )}
+
+      <GeneralModalWindow
+        isOpen={isOpen}
+        onClose={onClose}
+        afterOpenModal={afterOpenModal}
+        afterCloseModal={afterCloseModal}
+      >
+        <div className={css.modalImgWrapper}>
+        <img className={css.modalCastImg} src={img} width="200"/> 
+        <div className={css.modalCastText}>
+        <p>{name}</p>
+        <span>as </span>
+        <span>{character}</span>
+        </div> 
+        </div>
+   
+      </GeneralModalWindow>
     </div>
   );
 }

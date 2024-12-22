@@ -4,8 +4,9 @@
   z-index: 10;
   padding-top: 12px;
   padding-bottom: 12px;
-  border-bottom: 2px solid rgb(152, 184, 242);
+  /* border-bottom: 2px solid rgb(152, 184, 242); */
   background: rgb(1, 3, 15);
+  background: rgb(0, 3, 17);
 }
 
 .navigationContainer {
@@ -40,6 +41,32 @@ link {
   display: flex;
   font-size: 30px;
   text-decoration: inherit;
+}
+
+
+.navigationSection::before {
+  content: "";
+  width:100%;
+  height: 3px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left:0;
+  background-color: rgb(2, 10, 53);;
+}
+
+.navigationSection::after {
+  content: "";
+  width:100%;
+  height: 1px;
+  display: block;
+  position: absolute;
+  bottom: 2px;
+  left:0;
+  /* background-color:  #020941; */
+    background-color:  #2c3680;
+
+  ;
 }
 
 @media (min-width: 760px) {
