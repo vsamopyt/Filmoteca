@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import BarLoader from 'react-spinners/BarLoader';
 
 import { fetchMovieCastById } from '../../movies-api';
-import GeneralModalWindow from '../GeneraLModalWindow/GeneraLModalWindow';
+import CommonModalWindow from '../CommonlModalWindow/CommonlModalWindow';
 import MovieCastCard from '../MovieCastCard/MovieCastCard';
 import css from './MovieCast.module.css';
 
@@ -39,16 +39,7 @@ export default function MovieCast() {
     setIsOpen(true);
     setImg(`https://image.tmdb.org/t/p/w500/${item.profile_path}`);
     setName(item.name); 
-    setCharacter(item.character)
-
-
-    // console.log(event.target);
-    // console.log(event.target.src);
-    // setImg(<img src={event.target.src}/>)
-    // setImg(<img src={event.target}/>)
-   
-    
-
+    setCharacter(item.character);
   };
 
   const afterOpenModal = () => {
@@ -108,10 +99,6 @@ export default function MovieCast() {
                   initial="hidden"
                   animate="visible"
                   custom={i}
-                  // onClick={()=>{
-                  //   setIsOpen(true);
-                  //   setImg(<img src={`https://image.tmdb.org/t/p/w500/${item.profile_path}`} />)
-                  // }}
                   onClick={()=>{onOpen(item)}}
                 >
                   <MovieCastCard item={item} />
@@ -128,7 +115,7 @@ export default function MovieCast() {
         </p>
       )}
 
-      <GeneralModalWindow
+      <CommonModalWindow
         isOpen={isOpen}
         onClose={onClose}
         afterOpenModal={afterOpenModal}
@@ -143,7 +130,7 @@ export default function MovieCast() {
         </div> 
         </div>
    
-      </GeneralModalWindow>
+      </CommonModalWindow>
     </div>
   );
 }

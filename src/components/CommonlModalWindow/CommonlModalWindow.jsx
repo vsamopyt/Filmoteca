@@ -1,9 +1,9 @@
 import Modal from 'react-modal';
-import css from './GeneralModalWindow.module.css';
+import css from './CommonModalWindow.module.css';
 
 Modal.setAppElement('#root');
 
-const GeneralModalWindow = ({
+const CommonModalWindow = ({
   isOpen,
   onClose,
   children,
@@ -36,4 +36,4 @@ const GeneralModalWindow = ({
   );
 };
 
-export default GeneralModalWindow;
+export default CommonModalWindow;
