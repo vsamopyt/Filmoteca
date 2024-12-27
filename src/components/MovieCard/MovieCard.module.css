@@ -141,6 +141,19 @@
   opacity: 0.5;
 }
 
+.modalImgWrapper {
+  position: absolute;
+  top:50px;
+  right:0;
+ display: inline-block;
+}
+
+.modalImgIcon {
+  box-sizing: content-box;
+  padding: 4px;
+  cursor: pointer;
+}
+
 @media (min-width: 760px) {
   .movieCardImgWrapper {
     height: 521px;
@@ -151,4 +164,9 @@
   .movieCardImgWrapper {
     height: 438px;
   }
+
+  
+.modalImgIcon:hover {
+  color: orange
+}
 }

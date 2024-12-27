@@ -14,7 +14,7 @@ const listVariants = {
   hidden: { opacity: 0, x: 10 },
 };
 
-export default function MovieList({ array, currentPage }) {
+export default function MovieList({ array, currentPage, onOpen}) {
   return (
     <ol className={css.movieList}>
       {array.map((item, index) => {
@@ -27,7 +27,7 @@ export default function MovieList({ array, currentPage }) {
             animate="visible"
             custom={index}
           >
-            <MovieCard item={item} index={index} currentPage={currentPage} />
+            <MovieCard item={item} index={index} currentPage={currentPage} onOpen={onOpen} />
           </motion.li>
         );
       })}

@@ -45,7 +45,7 @@
 
 /* ----- MODAL WINDOW */
 .modalImgWrapper {
-  max-width: 420px;
+  max-width: 416px;
   display: flex;
   flex-direction: column;
   justify-content: center;

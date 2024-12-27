@@ -2,9 +2,6 @@
   padding-top: 94px;
   padding-bottom: 48px;
   background-color: rgb(1, 6, 31);
-
-
-
   min-height: 100vh;
 }
 .homePageContainer {
@@ -50,6 +47,11 @@
   display: flex;
   align-items: center;
 }
+
+.HomeModalImgWrapper {
+ max-width: 440px;
+}
+
 
 @media (min-width: 760px) {
   .homePageContainer {

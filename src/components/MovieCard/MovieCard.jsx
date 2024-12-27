@@ -1,11 +1,11 @@
 
 import { Link, useLocation } from 'react-router-dom';
-
+import { TbPictureInPictureOff } from "react-icons/tb";
 import RatingStars from '../RatingStars/RatingStars';
 
 import css from './MovieCard.module.css';
 
-export default function MovieCard({ item, index, currentPage }) {
+export default function MovieCard({ item, index, currentPage, onOpen }) {
   const { title, id, poster_path, vote_average, release_date } = item;
   const releaseYear = release_date ? release_date.slice(0, 4) : 'n/a';
   const voteAveragePersent = Math.round(vote_average * 100) / 10 + '%';
@@ -42,6 +42,11 @@ export default function MovieCard({ item, index, currentPage }) {
           {voteAveragePersentRounded}
         </div>
         <RatingStars rating={voteAveragePersent} />
+      </div>
+      {/* <div className={css.modalImgWrapper} onClick ={onOpen} data-img ={poster_path}> */}
+      <div className={css.modalImgWrapper} onClick ={onOpen} data-img ={poster_path}>
+        {/* <TbPictureInPictureOff className ={css.movieCardImgIcon} data-img ={poster_path}/>; */}
+           <TbPictureInPictureOff className={css.modalImgIcon} data-img ={poster_path} onClick ={onOpen} />;
       </div>
     </>
   );

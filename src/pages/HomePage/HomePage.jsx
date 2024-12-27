@@ -6,6 +6,7 @@ import BarLoader from 'react-spinners/BarLoader';
 
 import MovieTitleAnimation from '../../components/MovieTitleAnimation/MovieTitleAnimation';
 // import { motion } from 'framer-motion';
+import CommonModalWindow from '../../components/CommonlModalWindow/CommonlModalWindow';
 import MovieList from '../../components/MovieList/MovieList';
 import { fetchTrendingMovies } from '../../movies-api';
 import PaginatedItems from '../../components/MoviePagePagination/MoviePagePagination';
@@ -46,6 +47,28 @@ export default function HomePage() {
   const [totalPages, setTotalPages] = useState(1);
   const currentPage = searchParams.get('page') ?? '';
 
+  // ----modalWindow
+  const [isOpen, setIsOpen] = useState(false);
+  const [imgLink, setImgLink] = useState('');
+  const onOpen = event => {
+    if (event.target.tagName === 'svg') {
+      console.log(event.target.tagName);
+
+      setIsOpen(true);
+      setImgLink(
+        `https://image.tmdb.org/t/p/w500/${event.target.getAttribute(
+          'data-img'
+        )}`
+      );
+      console.log(event.target.getAttribute('data-img'));
+    }
+  };
+  const onClose = () => {
+    setIsOpen(false);
+  };
+
+  // ++++++++
+
   function handlePagination(newPage) {
     setSearchParams({ page: newPage });
   }
@@ -80,103 +103,6 @@ export default function HomePage() {
             rating="100%"
           />
         </div>
-        {/* <motion.h1
-          className={css.homePageTitle}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, type: 'tween', easy: 'easy' }}
-        >
-          <motion.span
-            className={css.homePageSpan}
-            initial={{ opacity: 1, color: 'blue', fontSize: '24px' }}
-            animate={{
-              rotate: 360,
-              opacity: 1,
-              color: 'blue',
-              fontSize: '24px',
-            }}
-            transition={{ duration: 2, type: 'tween', easy: 'easy' }}
-            style={{
-              display: 'inline-block',
-              transformOrigin: '50% 50%',
-              fontSize: '24px',
-              translate: '-50%, -50%',
-            }}
-          >
-            ★
-          </motion.span>
-          Trending movies
-          <motion.span
-            className={css.homePageSpan}
-            initial={{ opacity: 1, color: 'blue', fontSize: '24px' }}
-            animate={{
-              rotate: 360,
-              opacity: 1,
-              color: 'blue',
-              fontSize: '24px',
-            }}
-            transition={{ duration: 2, type: 'tween', easy: 'easy' }}
-            style={{
-              display: 'inline-block',
-              transformOrigin: '50% 50%',
-              fontSize: '24px',
-              translate: '-50%, -50%',
-            }}
-          >
-            ★
-          </motion.span>
-        </motion.h1>
-        <motion.p
-          className={css.homePageDate}
-          initial={{ opacity: 0, x: '35px' }}
-          animate={{ opacity: 1, x: '0x' }}
-          transition={{ duration: 1.5, type: 'tween', easy: 'easyOut' }}
-          style={{
-            display: 'inline-block',
-            transformOrigin: '50% 50%',
-            fontSize: '24px',
-            translate: '-50%, -50%',
-          }}
-        >
-          <motion.span
-            className={css.homePageSpan}
-            initial={{ opacity: 1, color: 'blue', fontSize: '24px' }}
-            animate={{
-              rotate: 360,
-              opacity: 1,
-              color: 'blue',
-              fontSize: '24px',
-            }}
-            transition={{ duration: 2, type: 'tween', easy: 'easy' }}
-            style={{
-              display: 'inline-block',
-              transformOrigin: '50% 50%',
-              fontSize: '24px',
-              translate: '-50%, -50%',
-            }}
-          >
-            ★
-          </motion.span>
-          {dateString}
-          <motion.span
-            initial={{ opacity: 1, color: 'blue', fontSize: '24px' }}
-            animate={{
-              rotate: 360,
-              opacity: 1,
-              color: 'blue',
-              fontSize: '24px',
-            }}
-            transition={{ duration: 2, type: 'tween', easy: 'easy' }}
-            style={{
-              display: 'inline-block',
-              transformOrigin: '50% 50%',
-              fontSize: '28px',
-              translate: '-50%, -50%',
-            }}
-          >
-            ★
-          </motion.span>
-        </motion.p> */}
 
         {homePageError && (
           <p>Ooops! Something went wrong! Reload the page please!</p>
@@ -204,7 +130,11 @@ export default function HomePage() {
           </div>
         )}
         {trendingMovies.length > 0 && (
-          <MovieList array={trendingMovies} currentPage={currentPage} />
+          <MovieList
+            array={trendingMovies}
+            currentPage={currentPage}
+            onOpen={onOpen}
+          />
         )}
 
         <ScrollToTop
@@ -225,6 +155,12 @@ export default function HomePage() {
             />
           </div>
         )}
+
+        <CommonModalWindow isOpen={isOpen} onClose={onClose}>
+          <div className={css.HomeModalImgWrapper}>
+          <img src={imgLink} alt="pictures" width="200"/>
+          </div>
+        </CommonModalWindow>
       </div>
     </section>
   );
